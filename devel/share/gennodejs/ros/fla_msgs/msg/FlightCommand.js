@@ -1,0 +1,1 @@
+/home/yi/intro2ros_2024/Project/devel/.private/fla_msgs/share/gennodejs/ros/fla_msgs/msg/FlightCommand.js

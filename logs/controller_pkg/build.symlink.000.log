@@ -1,0 +1,4 @@
+Symlinking /home/yi/intro2ros_2024/Project/devel/share/controller_pkg/cmake/controller_pkgConfig.cmake
+Symlinking /home/yi/intro2ros_2024/Project/devel/share/controller_pkg/cmake/controller_pkgConfig-version.cmake
+Symlinking /home/yi/intro2ros_2024/Project/devel/lib/controller_pkg/controller_node
+Symlinking /home/yi/intro2ros_2024/Project/devel/lib/pkgconfig/controller_pkg.pc

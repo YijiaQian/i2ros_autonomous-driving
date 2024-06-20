@@ -1,0 +1,1 @@
+/home/yi/intro2ros_2024/Project/devel/.private/nav_msgs/share/common-lisp/ros/nav_msgs/msg/_package_GetMapActionFeedback.lisp

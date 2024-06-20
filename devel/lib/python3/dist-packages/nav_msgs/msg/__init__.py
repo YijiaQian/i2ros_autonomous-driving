@@ -1,0 +1,1 @@
+/home/yi/intro2ros_2024/Project/devel/.private/nav_msgs/lib/python3/dist-packages/nav_msgs/msg/__init__.py

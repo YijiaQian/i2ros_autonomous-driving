@@ -1,0 +1,1 @@
+/home/yi/intro2ros_2024/Project/devel/.private/fla_msgs/share/common-lisp/ros/fla_msgs/msg/NodeStatus.lisp

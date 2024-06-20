@@ -1,0 +1,13 @@
+# Target labels
+ libsocket
+# Source files and their labels
+/home/yi/project_i2ros/build/simulation/CMakeFiles/libsocket
+/home/yi/project_i2ros/build/simulation/CMakeFiles/libsocket.rule
+/home/yi/project_i2ros/build/simulation/CMakeFiles/libsocket-complete.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-install.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-mkdir.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-download.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-update.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-patch.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-configure.rule
+/home/yi/project_i2ros/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-build.rule

@@ -1,0 +1,6 @@
+devel_space: /home/yi/project_i2ros/devel
+install: false
+install_space: /home/yi/project_i2ros/install
+profile: default
+source_space: /home/yi/project_i2ros/src
+workspace: /home/yi/project_i2ros
