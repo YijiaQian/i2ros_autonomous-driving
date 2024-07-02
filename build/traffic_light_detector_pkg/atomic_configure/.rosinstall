@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/setup.sh

@@ -1,0 +1,12 @@
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgsConfig.cmake to existing file /home/yi/project_i2ros/devel/share/mav_system_msgs/cmake/mav_system_msgsConfig.cmake
+Warning: Source hash: 2f1849bc109abf342b05ab642cbed1fe
+Warning: Dest hash: b75fdcc255ebbaf522aaf5989a9d84f8
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs-msg-paths.cmake to existing file /home/yi/project_i2ros/devel/share/mav_system_msgs/cmake/mav_system_msgs-msg-paths.cmake
+Warning: Source hash: 172d4d3bd25c2a0f2e3559485e557e27
+Warning: Dest hash: 15c44b9c03b95cd9dd696dd5aecf3921
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs-msg-extras.cmake to existing file /home/yi/project_i2ros/devel/share/mav_system_msgs/cmake/mav_system_msgs-msg-extras.cmake
+Warning: Source hash: 4200bf28cd1d9b14d1191e259d4caa71
+Warning: Dest hash: 429c979efd4e09df0953b7032615b895
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/mav_system_msgs/lib/pkgconfig/mav_system_msgs.pc to existing file /home/yi/project_i2ros/devel/lib/pkgconfig/mav_system_msgs.pc
+Warning: Source hash: 9193725a25019a128b351935b0172d24
+Warning: Dest hash: de9179e947bfd6f08736a58f36957179

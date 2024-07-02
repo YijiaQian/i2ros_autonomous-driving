@@ -64,7 +64,7 @@
 (setf (get mav_planning_msgs::Polygon2D :md5sum-) "8f02263beef99aa03117a577a3eb879d")
 (setf (get mav_planning_msgs::Polygon2D :datatype-) "mav_planning_msgs/Polygon2D")
 (setf (get mav_planning_msgs::Polygon2D :definition-)
-      "# A specification of a 2D polygon where the first and last points are assumed to be connected.
+      "# A specification of a 2D polygon where the first and last points are assumed to be connected, to detect the obstacle
 mav_planning_msgs/Point2D[] points
 
 ================================================================================

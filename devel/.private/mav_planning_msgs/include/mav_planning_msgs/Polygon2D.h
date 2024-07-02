@@ -147,7 +147,7 @@ struct Definition< ::mav_planning_msgs::Polygon2D_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "# A specification of a 2D polygon where the first and last points are assumed to be connected.\n"
+    return "# A specification of a 2D polygon where the first and last points are assumed to be connected, to detect the obstacle\n"
 "mav_planning_msgs/Point2D[] points\n"
 "\n"
 "================================================================================\n"

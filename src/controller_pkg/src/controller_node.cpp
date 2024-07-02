@@ -35,7 +35,7 @@ class controllerNode{
   Eigen::Vector3d x;     // current position of the UAV's c.o.m. in the world frame
   Eigen::Vector3d v;     // current velocity of the UAV's c.o.m. in the world frame
   Eigen::Matrix3d R;     // current orientation of the UAV
-  Eigen::Vector3d omega; // current angular velocity of the UAV's c.o.m. in the *body* frame
+  Eigen::Vector3d omega; // current angular velocity of the UAV's c.o.m. in the *body* frame, not in the world frame
 
   // Desired state
   Eigen::Vector3d xd;    // desired position of the UAV's c.o.m. in the world frame
@@ -49,7 +49,7 @@ public:
   controllerNode():hz(1000.0){
       
       current_state = nh.subscribe("current_state_est", 1, &controllerNode::onCurrentState, this);
-      car_commands = nh.advertise<mav_msgs::Actuators>("car_commands", 1);
+      car_commands = nh.advertise<mav_msgs::Actuators>("car_commands", 1);  //publish car_commands topic with Actuator type, can store 1 msg.
       timer = nh.createTimer(ros::Rate(hz), &controllerNode::controlLoop, this);
   }
 
@@ -60,11 +60,12 @@ public:
     omega << cur_state.twist.twist.angular.x,cur_state.twist.twist.angular.y,cur_state.twist.twist.angular.z;
     Eigen::Quaterniond q;
     tf::quaternionMsgToEigen (cur_state.pose.pose.orientation, q);
-    R = q.toRotationMatrix();
+    R = q.toRotationMatrix(); // the rotation matrix from body frame to world frame
 
 
     // Rotate omega
-    omega = R.transpose()*omega;
+    omega = R.transpose()*omega;  //needs to transform the omega from world frame to body frame, so times R transpose, and cur_state from
+    //nav_msg is the info of world frame.
   }
 
 

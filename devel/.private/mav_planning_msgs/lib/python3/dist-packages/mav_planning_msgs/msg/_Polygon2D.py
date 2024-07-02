@@ -12,7 +12,7 @@ class Polygon2D(genpy.Message):
   _md5sum = "8f02263beef99aa03117a577a3eb879d"
   _type = "mav_planning_msgs/Polygon2D"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """# A specification of a 2D polygon where the first and last points are assumed to be connected.
+  _full_text = """# A specification of a 2D polygon where the first and last points are assumed to be connected, to detect the obstacle
 mav_planning_msgs/Point2D[] points
 
 ================================================================================

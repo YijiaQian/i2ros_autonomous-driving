@@ -1,0 +1,8 @@
+[01m[K/home/yi/project_i2ros/src/traffic_light_detector_pkg/src/traffic_light_detector_node.cpp:[m[K In member function ‘[01m[Kvoid TrafficLightDetector::detectTrafficLights(cv::Mat&)[m[K’:
+[01m[K/home/yi/project_i2ros/src/traffic_light_detector_pkg/src/traffic_light_detector_node.cpp:82:37:[m[K [01;31m[Kerror: [m[K‘[01m[KcountCirles[m[K’ was not declared in this scope; did you mean ‘[01m[KcountCircles[m[K’?
+   82 |                 int black_circles = [01;31m[KcountCirles[m[K(black_mask);
+      |                                     [01;31m[K^~~~~~~~~~~[m[K
+      |                                     [32m[KcountCircles[m[K
+make[2]: *** [CMakeFiles/traffic_light_detector_node.dir/build.make:63: CMakeFiles/traffic_light_detector_node.dir/src/traffic_light_detector_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:462: CMakeFiles/traffic_light_detector_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

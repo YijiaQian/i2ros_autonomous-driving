@@ -64,10 +64,10 @@
   "8f02263beef99aa03117a577a3eb879d")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Polygon2D>)))
   "Returns full string definition for message of type '<Polygon2D>"
-  (cl:format cl:nil "# A specification of a 2D polygon where the first and last points are assumed to be connected.~%mav_planning_msgs/Point2D[] points~%~%================================================================================~%MSG: mav_planning_msgs/Point2D~%# This contains the position of a 2D point.~%float64 x~%float64 y~%~%~%"))
+  (cl:format cl:nil "# A specification of a 2D polygon where the first and last points are assumed to be connected, to detect the obstacle~%mav_planning_msgs/Point2D[] points~%~%================================================================================~%MSG: mav_planning_msgs/Point2D~%# This contains the position of a 2D point.~%float64 x~%float64 y~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Polygon2D)))
   "Returns full string definition for message of type 'Polygon2D"
-  (cl:format cl:nil "# A specification of a 2D polygon where the first and last points are assumed to be connected.~%mav_planning_msgs/Point2D[] points~%~%================================================================================~%MSG: mav_planning_msgs/Point2D~%# This contains the position of a 2D point.~%float64 x~%float64 y~%~%~%"))
+  (cl:format cl:nil "# A specification of a 2D polygon where the first and last points are assumed to be connected, to detect the obstacle~%mav_planning_msgs/Point2D[] points~%~%================================================================================~%MSG: mav_planning_msgs/Point2D~%# This contains the position of a 2D point.~%float64 x~%float64 y~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Polygon2D>))
   (cl:+ 0
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'points) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ (roslisp-msg-protocol:serialization-length ele))))

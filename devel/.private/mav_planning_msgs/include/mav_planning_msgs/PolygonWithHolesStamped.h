@@ -189,7 +189,7 @@ struct Definition< ::mav_planning_msgs::PolygonWithHolesStamped_<ContainerAlloca
 "\n"
 "================================================================================\n"
 "MSG: mav_planning_msgs/Polygon2D\n"
-"# A specification of a 2D polygon where the first and last points are assumed to be connected.\n"
+"# A specification of a 2D polygon where the first and last points are assumed to be connected, to detect the obstacle\n"
 "mav_planning_msgs/Point2D[] points\n"
 "\n"
 "================================================================================\n"

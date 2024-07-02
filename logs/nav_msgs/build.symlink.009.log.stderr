@@ -1,0 +1,12 @@
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/nav_msgs/share/nav_msgs/cmake/nav_msgsConfig.cmake to existing file /home/yi/project_i2ros/devel/share/nav_msgs/cmake/nav_msgsConfig.cmake
+Warning: Source hash: 18bbf61c2337e3d7c7b7916f48ca760b
+Warning: Dest hash: f9db5f358e90674f04ae3e6cd37834cc
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/nav_msgs/share/nav_msgs/cmake/nav_msgs-msg-extras.cmake to existing file /home/yi/project_i2ros/devel/share/nav_msgs/cmake/nav_msgs-msg-extras.cmake
+Warning: Source hash: 66e565f0e293abe240b38d22681d1fde
+Warning: Dest hash: 822b463192a42b143a4586c3d1f12306
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/nav_msgs/share/nav_msgs/cmake/nav_msgs-msg-paths.cmake to existing file /home/yi/project_i2ros/devel/share/nav_msgs/cmake/nav_msgs-msg-paths.cmake
+Warning: Source hash: 17033db1315f81f2f11d0e05769b85b6
+Warning: Dest hash: 16b6c59127b96191d677d7a827988769
+Warning: Cannot symlink from /home/yi/project_i2ros/devel/.private/nav_msgs/lib/pkgconfig/nav_msgs.pc to existing file /home/yi/project_i2ros/devel/lib/pkgconfig/nav_msgs.pc
+Warning: Source hash: 15c5c6f007b7f8c2d7098ac51f464850
+Warning: Dest hash: 15489effffa2937238c3faca572af4bd

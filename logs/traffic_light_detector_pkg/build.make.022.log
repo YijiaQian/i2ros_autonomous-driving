@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target traffic_light_detector_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/traffic_light_detector_node.dir/src/traffic_light_detector_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/lib/traffic_light_detector_pkg/traffic_light_detector_node[0m
+[100%] Built target traffic_light_detector_node
