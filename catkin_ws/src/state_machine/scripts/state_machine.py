@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-# Imports the rospy library, which is ROS’s Python client library
+# Imports the rospy library, which is ROSâ€™s Python client library
 import rospy
 
 # Smach is a library used for implementing finite state machines (FSM)
@@ -9,10 +9,9 @@ import smach
 # Provides additional functionalities to use smach within a ROS environment
 import smach_ros
 
-from traffic_light_detector_pkg.msg import TrafficLightState
 from std_msgs.msg import Float64, Bool
 from geometry_msgs.msg import Twist
-
+from traffic_light_detector_pkg.msg import TrafficLightState
 
 # A class that inherits from smach.State. It defines the behavior of the robot in the "drive" state
 class DriveState(smach.State):
