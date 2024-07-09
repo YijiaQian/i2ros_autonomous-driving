@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/yi/project_i2ros/build/mav_msgs
 include CMakeFiles/_mav_msgs_generate_messages_check_deps_AttitudeThrust.dir/progress.make
 
 CMakeFiles/_mav_msgs_generate_messages_check_deps_AttitudeThrust:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mav_msgs /home/yi/project_i2ros/src/mav_comm/mav_msgs/msg/AttitudeThrust.msg std_msgs/Header:geometry_msgs/Vector3:geometry_msgs/Quaternion
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mav_msgs /home/yi/project_i2ros/src/mav_comm/mav_msgs/msg/AttitudeThrust.msg geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Vector3
 
 _mav_msgs_generate_messages_check_deps_AttitudeThrust: CMakeFiles/_mav_msgs_generate_messages_check_deps_AttitudeThrust
 _mav_msgs_generate_messages_check_deps_AttitudeThrust: CMakeFiles/_mav_msgs_generate_messages_check_deps_AttitudeThrust.dir/build.make

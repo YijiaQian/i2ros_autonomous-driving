@@ -1,4 +1,4 @@
-prefix=/home/yi/intro2ros_2024/Project/devel/.private/catkin_tools_prebuild
+prefix=/home/yi/project_i2ros/devel/.private/catkin_tools_prebuild
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

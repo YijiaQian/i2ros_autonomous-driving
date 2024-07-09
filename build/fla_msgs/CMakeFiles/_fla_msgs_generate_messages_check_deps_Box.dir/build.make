@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/yi/project_i2ros/build/fla_msgs
 include CMakeFiles/_fla_msgs_generate_messages_check_deps_Box.dir/progress.make
 
 CMakeFiles/_fla_msgs_generate_messages_check_deps_Box:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py fla_msgs /home/yi/project_i2ros/src/system/fla_msgs/msg/Box.msg geometry_msgs/Vector3:std_msgs/Header
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py fla_msgs /home/yi/project_i2ros/src/system/fla_msgs/msg/Box.msg std_msgs/Header:geometry_msgs/Vector3
 
 _fla_msgs_generate_messages_check_deps_Box: CMakeFiles/_fla_msgs_generate_messages_check_deps_Box
 _fla_msgs_generate_messages_check_deps_Box: CMakeFiles/_fla_msgs_generate_messages_check_deps_Box.dir/build.make

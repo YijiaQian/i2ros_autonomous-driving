@@ -1,7 +1,0 @@
-[01m[K/home/yi/project_i2ros/src/traffic_light_detector_pkg/src/traffic_light_detector_node.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Ktraffic_light_detector/TrafficLightState.h: No such file or directory
-    5 | #include [01;31m[K<traffic_light_detector/TrafficLightState.h>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/traffic_light_detector_node.dir/build.make:63: CMakeFiles/traffic_light_detector_node.dir/src/traffic_light_detector_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:565: CMakeFiles/traffic_light_detector_node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

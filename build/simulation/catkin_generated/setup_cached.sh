@@ -8,8 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/yi/project_i2ros/devel/.private/simulation:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/yi/project_i2ros/devel/.private/simulation/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/yi/project_i2ros/devel/.private/simulation/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yi/project_i2ros/build/simulation'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/yi/project_i2ros/devel/.private/simulation/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/yi/intro2ros_2024/Project/src/simulation:/home/yi/project_i2ros/src/simulation:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/yi/project_i2ros/src/simulation:$ROS_PACKAGE_PATH"

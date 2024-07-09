@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/msg/ProcessInfo.js
+/home/yi/project_i2ros/devel/.private/mav_system_msgs/share/gennodejs/ros/mav_system_msgs/msg/ProcessInfo.js

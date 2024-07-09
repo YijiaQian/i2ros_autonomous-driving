@@ -1,0 +1,4 @@
+Symlinking /home/yi/project_i2ros/devel/share/map/cmake/mapConfig-version.cmake
+Symlinking /home/yi/project_i2ros/devel/share/map/cmake/mapConfig.cmake
+Symlinking /home/yi/project_i2ros/devel/lib/map/generatePointCloud
+Symlinking /home/yi/project_i2ros/devel/lib/pkgconfig/map.pc

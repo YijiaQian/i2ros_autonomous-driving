@@ -79,6 +79,12 @@ private:
 
     std::string getTrafficLightColor(const cv::Mat& region)
     {
+        // int margin = 1; // 设置边缘裁剪的宽度
+        // cv::Rect center_rect(margin, margin, region.cols - 2 * margin, region.rows - 2 * margin);
+        // cv::Mat center_region = region(center_rect);
+        // cv::Mat hsv;
+        // cv::cvtColor(center_region, hsv, cv::COLOR_BGR2HSV);
+
         cv::Mat hsv;
         cv::cvtColor(region, hsv, cv::COLOR_BGR2HSV);
 

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/yi/project_i2ros/build/fla_msgs
 include CMakeFiles/_fla_msgs_generate_messages_check_deps_FlightStateTransition.dir/progress.make
 
 CMakeFiles/_fla_msgs_generate_messages_check_deps_FlightStateTransition:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py fla_msgs /home/yi/project_i2ros/src/system/fla_msgs/msg/FlightStateTransition.msg std_msgs/String:std_msgs/Header
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py fla_msgs /home/yi/project_i2ros/src/system/fla_msgs/msg/FlightStateTransition.msg std_msgs/Header:std_msgs/String
 
 _fla_msgs_generate_messages_check_deps_FlightStateTransition: CMakeFiles/_fla_msgs_generate_messages_check_deps_FlightStateTransition
 _fla_msgs_generate_messages_check_deps_FlightStateTransition: CMakeFiles/_fla_msgs_generate_messages_check_deps_FlightStateTransition.dir/build.make

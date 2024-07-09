@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/nav_msgs/share/nav_msgs/cmake/nav_msgs-msg-extras.cmake
+/home/yi/project_i2ros/devel/.private/nav_msgs/share/nav_msgs/cmake/nav_msgs-msg-extras.cmake

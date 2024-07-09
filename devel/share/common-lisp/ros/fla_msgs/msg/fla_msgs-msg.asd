@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/fla_msgs/share/common-lisp/ros/fla_msgs/msg/fla_msgs-msg.asd
+/home/yi/project_i2ros/devel/.private/fla_msgs/share/common-lisp/ros/fla_msgs/msg/fla_msgs-msg.asd

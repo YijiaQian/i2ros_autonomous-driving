@@ -1,0 +1,4 @@
+Symlinking /home/yi/project_i2ros/devel/share/controller_pkg/cmake/controller_pkgConfig.cmake
+Symlinking /home/yi/project_i2ros/devel/share/controller_pkg/cmake/controller_pkgConfig-version.cmake
+Symlinking /home/yi/project_i2ros/devel/lib/controller_pkg/controller_node
+Symlinking /home/yi/project_i2ros/devel/lib/pkgconfig/controller_pkg.pc

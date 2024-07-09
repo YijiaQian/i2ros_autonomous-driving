@@ -72,9 +72,9 @@ CMakeFiles/mav_msgs_generate_messages_eus: /home/yi/project_i2ros/devel/.private
 
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l: /home/yi/project_i2ros/src/mav_comm/mav_msgs/msg/AttitudeThrust.msg
+/home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yi/project_i2ros/build/mav_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from mav_msgs/AttitudeThrust.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/yi/project_i2ros/src/mav_comm/mav_msgs/msg/AttitudeThrust.msg -Imav_msgs:/home/yi/project_i2ros/src/mav_comm/mav_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p mav_msgs -o /home/yi/project_i2ros/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg
 

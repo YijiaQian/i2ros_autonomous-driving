@@ -18,10 +18,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/yi/project_i2ros/src/utilities/fla_utils/include"
+  "/home/yi/project_i2ros/devel/.private/fla_msgs/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
-  "/home/yi/intro2ros_2024/Project/devel/.private/fla_msgs/include"
   "/usr/include/opencv4"
   "/home/yi/project_i2ros/devel/include/utils"
   )

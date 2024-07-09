@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv/mav_state_machine_msgs-srv.asd
+/home/yi/project_i2ros/devel/.private/mav_state_machine_msgs/share/common-lisp/ros/mav_state_machine_msgs/srv/mav_state_machine_msgs-srv.asd

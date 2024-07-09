@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__init__.py
+/home/yi/project_i2ros/devel/.private/mav_system_msgs/lib/python3/dist-packages/mav_system_msgs/msg/__init__.py

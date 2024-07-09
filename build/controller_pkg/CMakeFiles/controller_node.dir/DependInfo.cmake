@@ -17,10 +17,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/yi/project_i2ros/devel/.private/mav_msgs/include"
+  "/home/yi/project_i2ros/src/mav_comm/mav_msgs/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/yi/intro2ros_2024/Project/devel/.private/mav_msgs/include"
-  "/home/yi/intro2ros_2024/Project/src/mav_comm/mav_msgs/include"
   "/usr/include/eigen3"
   )
 

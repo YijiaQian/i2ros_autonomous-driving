@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_system_msgs/share/roseus/ros/mav_system_msgs/msg/ProcessInfo.l
+/home/yi/project_i2ros/devel/.private/mav_system_msgs/share/roseus/ros/mav_system_msgs/msg/ProcessInfo.l

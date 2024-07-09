@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/yi/project_i2ros/devel/.private/mav_msgs:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/yi/project_i2ros/devel/.private/mav_msgs/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/yi/project_i2ros/devel/.private/mav_msgs/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yi/project_i2ros/build/mav_msgs'
-export PYTHONPATH="/home/yi/project_i2ros/devel/.private/mav_msgs/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/yi/intro2ros_2024/Project/src/mav_comm/mav_msgs:/home/yi/project_i2ros/src/mav_comm/mav_msgs:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/yi/project_i2ros/src/mav_comm/mav_msgs:$ROS_PACKAGE_PATH"

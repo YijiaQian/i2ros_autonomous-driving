@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -Wl,--no-as-needed -std=c++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"controller_pkg\"
 
-CXX_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/yi/intro2ros_2024/Project/devel/.private/mav_msgs/include -I/home/yi/intro2ros_2024/Project/src/mav_comm/mav_msgs/include -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/yi/project_i2ros/devel/.private/mav_msgs/include -I/home/yi/project_i2ros/src/mav_comm/mav_msgs/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 
 

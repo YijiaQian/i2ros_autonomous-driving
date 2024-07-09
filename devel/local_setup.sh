@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/catkin_tools_prebuild/local_setup.sh
+/home/yi/project_i2ros/devel/.private/catkin_tools_prebuild/local_setup.sh

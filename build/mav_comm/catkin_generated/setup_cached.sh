@@ -10,4 +10,4 @@
 export CMAKE_PREFIX_PATH="/home/yi/project_i2ros/devel/.private/mav_comm:$CMAKE_PREFIX_PATH"
 export PWD='/home/yi/project_i2ros/build/mav_comm'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/yi/project_i2ros/devel/.private/mav_comm/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/yi/intro2ros_2024/Project/src/mav_comm/mav_comm:/home/yi/project_i2ros/src/mav_comm/mav_comm:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/yi/project_i2ros/src/mav_comm/mav_comm:$ROS_PACKAGE_PATH"

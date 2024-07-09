@@ -71,9 +71,9 @@ CMakeFiles/mav_msgs_generate_messages_lisp: /home/yi/project_i2ros/devel/.privat
 
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp: /home/yi/project_i2ros/src/mav_comm/mav_msgs/msg/AttitudeThrust.msg
+/home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg/AttitudeThrust.lisp: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yi/project_i2ros/build/mav_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from mav_msgs/AttitudeThrust.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/yi/project_i2ros/src/mav_comm/mav_msgs/msg/AttitudeThrust.msg -Imav_msgs:/home/yi/project_i2ros/src/mav_comm/mav_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p mav_msgs -o /home/yi/project_i2ros/devel/.private/mav_msgs/share/common-lisp/ros/mav_msgs/msg
 

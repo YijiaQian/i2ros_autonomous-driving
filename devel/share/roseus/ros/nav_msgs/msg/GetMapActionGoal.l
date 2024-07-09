@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/nav_msgs/share/roseus/ros/nav_msgs/msg/GetMapActionGoal.l
+/home/yi/project_i2ros/devel/.private/nav_msgs/share/roseus/ros/nav_msgs/msg/GetMapActionGoal.l

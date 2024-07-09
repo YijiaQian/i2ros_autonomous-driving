@@ -8,8 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/yi/project_i2ros/devel/.private/fla_utils:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/yi/project_i2ros/devel/.private/fla_utils/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/yi/project_i2ros/devel/.private/fla_utils/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yi/project_i2ros/build/fla_utils'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/yi/project_i2ros/devel/.private/fla_utils/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/yi/intro2ros_2024/Project/src/utilities/fla_utils:/home/yi/project_i2ros/src/utilities/fla_utils:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/yi/project_i2ros/src/utilities/fla_utils:$ROS_PACKAGE_PATH"

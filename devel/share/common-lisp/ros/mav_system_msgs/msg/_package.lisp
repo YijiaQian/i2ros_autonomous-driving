@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/_package.lisp
+/home/yi/project_i2ros/devel/.private/mav_system_msgs/share/common-lisp/ros/mav_system_msgs/msg/_package.lisp

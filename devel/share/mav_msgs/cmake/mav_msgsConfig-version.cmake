@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig-version.cmake
+/home/yi/project_i2ros/devel/.private/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig-version.cmake

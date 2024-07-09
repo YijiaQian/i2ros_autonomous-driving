@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/fla_msgs/share/gennodejs/ros/fla_msgs/msg/Detection.js
+/home/yi/project_i2ros/devel/.private/fla_msgs/share/gennodejs/ros/fla_msgs/msg/Detection.js

@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.l
+/home/yi/project_i2ros/devel/.private/mav_planning_msgs/share/roseus/ros/mav_planning_msgs/msg/PolygonWithHolesStamped.l

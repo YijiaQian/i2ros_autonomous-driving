@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/_index.js
+/home/yi/project_i2ros/devel/.private/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/_index.js

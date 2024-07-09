@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/nav_msgs/share/gennodejs/ros/nav_msgs/msg/_index.js
+/home/yi/project_i2ros/devel/.private/nav_msgs/share/gennodejs/ros/nav_msgs/msg/_index.js

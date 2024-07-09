@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/yi/project_i2ros/build/traffic_light_detector_pkg'
-export PYTHONPATH="/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/yi/project_i2ros/src/traffic_light_detector_pkg:$ROS_PACKAGE_PATH"

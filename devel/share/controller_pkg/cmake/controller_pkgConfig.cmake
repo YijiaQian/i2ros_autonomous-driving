@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig.cmake
+/home/yi/project_i2ros/devel/.private/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig.cmake

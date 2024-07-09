@@ -1,1 +1,1 @@
-/home/yi/intro2ros_2024/Project/devel/.private/controller_pkg/lib/pkgconfig/controller_pkg.pc
+/home/yi/project_i2ros/devel/.private/controller_pkg/lib/pkgconfig/controller_pkg.pc
