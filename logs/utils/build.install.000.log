@@ -1,7 +1,0 @@
-[36mInstall the project...[0m
--- Install configuration: "Release"
--- Installing: /home/yi/project_i2ros/devel/lib/cmake/utils/utilsConfig.cmake
--- Installing: /home/yi/project_i2ros/devel/lib/cmake/utils/utilsConfigVersion.cmake
--- Installing: /home/yi/project_i2ros/devel/include/utils/time_manager
--- Installing: /home/yi/project_i2ros/devel/include/utils/time_manager/clock.h
--- Installing: /home/yi/project_i2ros/devel/include/utils/time_manager/time_manager.h

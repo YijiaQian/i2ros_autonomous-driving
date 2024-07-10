@@ -185,7 +185,7 @@ foreach(t ${map_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp;sensor_msgs;image_transport;cv_bridge;pcl_ros;pcl_conversions")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

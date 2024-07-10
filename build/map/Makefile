@@ -623,6 +623,19 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named generatePointCloud_node
+
+# Build rule for target.
+generatePointCloud_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 generatePointCloud_node
+.PHONY : generatePointCloud_node
+
+# fast build rule for target.
+generatePointCloud_node/fast:
+	$(MAKE) -f CMakeFiles/generatePointCloud_node.dir/build.make CMakeFiles/generatePointCloud_node.dir/build
+.PHONY : generatePointCloud_node/fast
+
+#=============================================================================
 # Target rules for targets named topic_tools_generate_messages_py
 
 # Build rule for target.
@@ -712,19 +725,6 @@ bond_generate_messages_cpp: cmake_check_build_system
 bond_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/bond_generate_messages_cpp.dir/build.make CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named generatePointCloud
-
-# Build rule for target.
-generatePointCloud: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 generatePointCloud
-.PHONY : generatePointCloud
-
-# fast build rule for target.
-generatePointCloud/fast:
-	$(MAKE) -f CMakeFiles/generatePointCloud.dir/build.make CMakeFiles/generatePointCloud.dir/build
-.PHONY : generatePointCloud/fast
 
 #=============================================================================
 # Target rules for targets named bond_generate_messages_eus
@@ -1317,7 +1317,7 @@ src/generatePointCloud.o: src/generatePointCloud.cpp.o
 
 # target to build an object file
 src/generatePointCloud.cpp.o:
-	$(MAKE) -f CMakeFiles/generatePointCloud.dir/build.make CMakeFiles/generatePointCloud.dir/src/generatePointCloud.cpp.o
+	$(MAKE) -f CMakeFiles/generatePointCloud_node.dir/build.make CMakeFiles/generatePointCloud_node.dir/src/generatePointCloud.cpp.o
 .PHONY : src/generatePointCloud.cpp.o
 
 src/generatePointCloud.i: src/generatePointCloud.cpp.i
@@ -1326,7 +1326,7 @@ src/generatePointCloud.i: src/generatePointCloud.cpp.i
 
 # target to preprocess a source file
 src/generatePointCloud.cpp.i:
-	$(MAKE) -f CMakeFiles/generatePointCloud.dir/build.make CMakeFiles/generatePointCloud.dir/src/generatePointCloud.cpp.i
+	$(MAKE) -f CMakeFiles/generatePointCloud_node.dir/build.make CMakeFiles/generatePointCloud_node.dir/src/generatePointCloud.cpp.i
 .PHONY : src/generatePointCloud.cpp.i
 
 src/generatePointCloud.s: src/generatePointCloud.cpp.s
@@ -1335,7 +1335,7 @@ src/generatePointCloud.s: src/generatePointCloud.cpp.s
 
 # target to generate assembly for a file
 src/generatePointCloud.cpp.s:
-	$(MAKE) -f CMakeFiles/generatePointCloud.dir/build.make CMakeFiles/generatePointCloud.dir/src/generatePointCloud.cpp.s
+	$(MAKE) -f CMakeFiles/generatePointCloud_node.dir/build.make CMakeFiles/generatePointCloud_node.dir/src/generatePointCloud.cpp.s
 .PHONY : src/generatePointCloud.cpp.s
 
 # Help Target
@@ -1384,6 +1384,7 @@ help:
 	@echo "... download_extra_data"
 	@echo "... doxygen"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... generatePointCloud_node"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_py"
@@ -1392,7 +1393,6 @@ help:
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... bond_generate_messages_cpp"
-	@echo "... generatePointCloud"
 	@echo "... bond_generate_messages_eus"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... sensor_msgs_generate_messages_eus"

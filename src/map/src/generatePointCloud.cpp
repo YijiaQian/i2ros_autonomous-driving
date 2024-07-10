@@ -10,6 +10,8 @@
 #include <pcl_conversions/pcl_conversions.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <Eigen/Dense>
+#include <pcl/common/transforms.h>
 
 // 定义点云类型
 typedef pcl::PointXYZRGBA PointT;
@@ -41,6 +43,7 @@ public:
         try
         {
             rgb_image_ = cv_bridge::toCvShare(msg, "bgr8")->image;
+            ROS_INFO("Received RGB image.");
         }
         catch (cv_bridge::Exception& e)
         {
@@ -53,6 +56,7 @@ public:
         try
         {
             depth_image_ = cv_bridge::toCvShare(msg, sensor_msgs::image_encodings::TYPE_16UC1)->image;
+            ROS_INFO("Received depth image.");
             generatePointCloud();
         }
         catch (cv_bridge::Exception& e)
@@ -95,9 +99,30 @@ public:
         cloud->width = cloud->points.size();
         cloud->is_dense = false;
 
+        ROS_INFO("Generated point cloud with %lu points.", cloud->points.size());
+
+        // 旋转变换矩阵（绕X轴旋转-90度）
+        Eigen::Matrix4f transform = Eigen::Matrix4f::Identity();
+        float theta = -M_PI / 2; // -90 degrees in radians
+        transform(1, 1) = cos(theta);
+        transform(1, 2) = -sin(theta);
+        transform(2, 1) = sin(theta);
+        transform(2, 2) = cos(theta);
+
+        // 对点云进行变换
+        PointCloud::Ptr transformed_cloud(new PointCloud);
+        pcl::transformPointCloud(*cloud, *transformed_cloud, transform);
+
+        // 调试：打印一些点的坐标以验证变换
+        for (size_t i = 0; i < std::min<size_t>(10, transformed_cloud->points.size()); ++i)
+        {
+            const PointT& pt = transformed_cloud->points[i];
+            ROS_INFO("Transformed Point %zu: x=%f, y=%f, z=%f", i, pt.x, pt.y, pt.z);
+        }
+
         // 将点云转换为ROS消息并发布
         sensor_msgs::PointCloud2 output;
-        pcl::toROSMsg(*cloud, output);
+        pcl::toROSMsg(*transformed_cloud, output);
         output.header.frame_id = "Quadrotor/Sensors/DepthCamera";
         cloud_pub_.publish(output);
 
@@ -116,7 +141,7 @@ private:
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "depth_to_pointcloud");
+    ros::init(argc, argv, "generatePointCloud");
     DepthToPointCloud d2p;
     ros::spin();
     return 0;
