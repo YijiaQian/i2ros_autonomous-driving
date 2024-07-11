@@ -1,0 +1,1 @@
+/home/joshua/project/project_i2ros/catkin_ws/devel/.private/mav_msgs/share/mav_msgs/cmake/mav_msgsConfig-version.cmake

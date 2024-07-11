@@ -1,0 +1,1 @@
+/home/joshua/project/project_i2ros/catkin_ws/devel/.private/controller_pkg/share/controller_pkg/cmake/controller_pkgConfig-version.cmake

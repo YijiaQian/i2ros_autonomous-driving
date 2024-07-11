@@ -1,0 +1,1 @@
+/home/joshua/project/project_i2ros/catkin_ws/devel/.private/fla_msgs/share/common-lisp/ros/fla_msgs/msg/ControlMessage.lisp

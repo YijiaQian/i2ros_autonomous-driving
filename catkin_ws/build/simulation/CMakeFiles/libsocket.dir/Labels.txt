@@ -1,0 +1,13 @@
+# Target labels
+ libsocket
+# Source files and their labels
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/CMakeFiles/libsocket
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/CMakeFiles/libsocket.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/CMakeFiles/libsocket-complete.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-install.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-mkdir.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-download.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-update.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-patch.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-configure.rule
+/home/joshua/project/project_i2ros/catkin_ws/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-build.rule

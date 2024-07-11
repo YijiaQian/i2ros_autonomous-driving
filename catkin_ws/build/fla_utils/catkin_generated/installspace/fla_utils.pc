@@ -1,0 +1,8 @@
+prefix=/home/joshua/project/project_i2ros/catkin_ws/install
+
+Name: fla_utils
+Description: Description of fla_utils
+Version: 0.0.0
+Cflags: -I${prefix}/include -I/home/joshua/project/project_i2ros/catkin_ws/devel/include/utils
+Libs: -L${prefix}/lib 
+Requires: 

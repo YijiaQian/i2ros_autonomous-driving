@@ -1,0 +1,6 @@
+devel_space: /home/joshua/project/project_i2ros/catkin_ws/devel
+install: false
+install_space: /home/joshua/project/project_i2ros/catkin_ws/install
+profile: default
+source_space: /home/joshua/project/project_i2ros/catkin_ws/src
+workspace: /home/joshua/project/project_i2ros/catkin_ws

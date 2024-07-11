@@ -1,0 +1,1 @@
+/home/joshua/project/project_i2ros/catkin_ws/devel/.private/mav_msgs/share/roseus/ros/mav_msgs/msg/AttitudeThrust.l
