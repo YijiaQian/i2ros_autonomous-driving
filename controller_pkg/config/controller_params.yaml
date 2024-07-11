@@ -1,0 +1,8 @@
+params: 
+    kp1 : 1
+    kp2 : 1
+    kp3 : 1
+    kd1 : 1
+    kd2 : 1
+    kd3 : 1
+
