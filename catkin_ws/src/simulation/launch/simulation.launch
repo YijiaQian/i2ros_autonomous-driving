@@ -38,6 +38,13 @@
     <param unless="$(arg corrupt_state_estimate)" name="jump_seconds" value="-1.0"/>
   </node>
 
+  <node name="trajectory_planner" pkg="trajectory_publisher" type="trajectory_publisher.py" output="screen" cwd="node">
+    <param name="start_x" value="0.0" />
+    <param name="start_y" value="0.0" />
+    <param name="goal_x" value="7.0" />
+    <param name="goal_y" value="7.0" />
+  </node>
+
   <node name="w_to_unity" pkg="simulation" type="w_to_unity"/>
 
 

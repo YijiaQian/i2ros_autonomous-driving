@@ -1,0 +1,1 @@
+/home/joshua/project/project_i2ros/catkin_ws/devel/.private/trajectory_publisher/share/trajectory_publisher/cmake/trajectory_publisherConfig-version.cmake

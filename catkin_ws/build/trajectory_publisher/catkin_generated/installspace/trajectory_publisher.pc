@@ -1,0 +1,8 @@
+prefix=/home/joshua/project/project_i2ros/catkin_ws/install
+
+Name: trajectory_publisher
+Description: Description of trajectory_publisher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs geometry_msgs nav_msgs

@@ -1,0 +1,1 @@
+/home/joshua/project/project_i2ros/catkin_ws/devel/.private/trajectory_publisher/lib/trajectory_publisher/trajectory_publisher.py
