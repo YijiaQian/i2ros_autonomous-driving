@@ -1,0 +1,8 @@
+prefix=/home/yi/project_i2ros/install
+
+Name: generate_pointcloud
+Description: Description of generate_pointcloud
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

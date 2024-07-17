@@ -1,0 +1,1 @@
+/home/yi/project_i2ros/devel/.private/catkin_tools_prebuild/setup.zsh

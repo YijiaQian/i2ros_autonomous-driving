@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/yi/project_i2ros/devel/.private/generate_pointcloud/setup.sh

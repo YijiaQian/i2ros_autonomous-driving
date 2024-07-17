@@ -1,0 +1,7 @@
+[01m[K/home/yi/project_i2ros/src/map/src/generatePointCloud.cpp:[m[K In member function ‘[01m[Kvoid DepthToPointCloud::generatePointCloud()[m[K’:
+[01m[K/home/yi/project_i2ros/src/map/src/generatePointCloud.cpp:108:14:[m[K [01;31m[Kerror: [m[K‘[01m[KtransformPointCloud[m[K’ is not a member of ‘[01m[Kpcl[m[K’
+  108 |         pcl::[01;31m[KtransformPointCloud[m[K(*cloud, *transformed_cloud, transform);
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/generatePointCloud.dir/build.make:63: CMakeFiles/generatePointCloud.dir/src/generatePointCloud.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1352: CMakeFiles/generatePointCloud.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

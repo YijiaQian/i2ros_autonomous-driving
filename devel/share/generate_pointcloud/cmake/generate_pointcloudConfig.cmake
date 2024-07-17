@@ -1,0 +1,1 @@
+/home/yi/project_i2ros/devel/.private/generate_pointcloud/share/generate_pointcloud/cmake/generate_pointcloudConfig.cmake
