@@ -1,0 +1,1 @@
+/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/traffic_light_detector_pkg/share/gennodejs/ros/traffic_light_detector_pkg/msg/TrafficLightState.js

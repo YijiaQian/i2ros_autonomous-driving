@@ -1,0 +1,1 @@
+/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/move_base/lib/pkgconfig/move_base.pc

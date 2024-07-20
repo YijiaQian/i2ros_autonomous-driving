@@ -1,0 +1,1 @@
+/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/mav_state_machine_msgs/share/gennodejs/ros/mav_state_machine_msgs/msg/_index.js

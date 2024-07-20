@@ -1,0 +1,30 @@
+frequency: 2
+frame_id: "body"
+poses:
+  - position:
+      x: 0.0
+      y: -62.90
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.70704
+      w: 0.70717
+  - position:
+      x: -10.0
+      y: -62.90
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.70704
+      w: 0.70717
+  - position:
+      x: -20.0
+      y: -62.90
+      z: 0.0
+    orientation:
+      x: 0.0
+      y: 0.0
+      z: 0.70704
+      w: 0.70717

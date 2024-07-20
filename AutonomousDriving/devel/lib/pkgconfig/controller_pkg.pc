@@ -1,0 +1,1 @@
+/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/controller_pkg/lib/pkgconfig/controller_pkg.pc

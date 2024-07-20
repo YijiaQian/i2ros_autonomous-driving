@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/simulation/setup.sh

@@ -1,0 +1,4 @@
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/share/waypoint_follower/cmake/waypoint_followerConfig-version.cmake
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/share/waypoint_follower/cmake/waypoint_followerConfig.cmake
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/lib/pkgconfig/waypoint_follower.pc
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/lib/waypoint_follower/waypoint_follower_node

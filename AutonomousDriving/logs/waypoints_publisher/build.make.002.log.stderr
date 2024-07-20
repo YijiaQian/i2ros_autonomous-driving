@@ -1,0 +1,7 @@
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoints_publisher/src/waypoints_publisher.cpp:[m[K In member function ‘[01m[Kvoid WaypointsPublisher::run()[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoints_publisher/src/waypoints_publisher.cpp:50:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   50 |             [01;31m[K}[m[K
+      |             [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/waypoints_publisher.dir/build.make:63: CMakeFiles/waypoints_publisher.dir/src/waypoints_publisher.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:479: CMakeFiles/waypoints_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

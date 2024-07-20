@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/CMakeFiles/libsocket"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/CMakeFiles/libsocket.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/CMakeFiles/libsocket-complete.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-install.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-mkdir.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-download.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-update.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-patch.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-configure.rule"
+		},
+		{
+			"file" : "/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/simulation/libsocket-prefix/src/libsocket-stamp/libsocket-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libsocket"
+		],
+		"name" : "libsocket"
+	}
+}

@@ -1,0 +1,105 @@
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_follower/src/waypoint_follower.cpp:[m[K In constructor ‘[01m[KWaypointFollower::WaypointFollower()[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_follower/src/waypoint_follower.cpp:15:57:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::getParam(const char [10], std::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >&)[m[K’
+   15 |         if (!private_nh.getParam("waypoints", waypoints_[01;31m[K)[m[K) {
+      |                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_follower/src/waypoint_follower.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1672:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::string&) const[m[K’
+ 1672 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::string& s) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1672:54:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::string&[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>&[m[K’}
+ 1672 |   bool getParam(const std::string& key, [01;36m[Kstd::string& s[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~^[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, double&) const[m[K’
+ 1683 |   bool [01;36m[KgetParam[m[K(const std::string& key, double& d) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1683:49:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kdouble&[m[K’
+ 1683 |   bool getParam(const std::string& key, [01;36m[Kdouble& d[m[K) const;
+      |                                         [01;36m[K~~~~~~~~^[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, float&) const[m[K’
+ 1694 |   bool [01;36m[KgetParam[m[K(const std::string& key, float& f) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1694:48:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kfloat&[m[K’
+ 1694 |   bool getParam(const std::string& key, [01;36m[Kfloat& f[m[K) const;
+      |                                         [01;36m[K~~~~~~~^[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, int&) const[m[K’
+ 1705 |   bool [01;36m[KgetParam[m[K(const std::string& key, int& i) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1705:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kint&[m[K’
+ 1705 |   bool getParam(const std::string& key, [01;36m[Kint& i[m[K) const;
+      |                                         [01;36m[K~~~~~^[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, bool&) const[m[K’
+ 1716 |   bool [01;36m[KgetParam[m[K(const std::string& key, bool& b) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1716:47:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kbool&[m[K’
+ 1716 |   bool getParam(const std::string& key, [01;36m[Kbool& b[m[K) const;
+      |                                         [01;36m[K~~~~~~^[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, XmlRpc::XmlRpcValue&) const[m[K’
+ 1727 |   bool [01;36m[KgetParam[m[K(const std::string& key, XmlRpc::XmlRpcValue& v) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1727:62:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[KXmlRpc::XmlRpcValue&[m[K’
+ 1727 |   bool getParam(const std::string& key, [01;36m[KXmlRpc::XmlRpcValue& v[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1739:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::vector<std::__cxx11::basic_string<char> >&) const[m[K’
+ 1739 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::vector<std::string>& vec) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1739:67:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> >&[m[K’
+ 1739 |   bool getParam(const std::string& key, [01;36m[Kstd::vector<std::string>& vec[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1750:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::vector<double>&) const[m[K’
+ 1750 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::vector<double>& vec) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1750:62:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::vector<double>&[m[K’
+ 1750 |   bool getParam(const std::string& key, [01;36m[Kstd::vector<double>& vec[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1761:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::vector<float>&) const[m[K’
+ 1761 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::vector<float>& vec) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1761:61:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::vector<float>&[m[K’
+ 1761 |   bool getParam(const std::string& key, [01;36m[Kstd::vector<float>& vec[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1772:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::vector<int>&) const[m[K’
+ 1772 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::vector<int>& vec) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1772:59:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::vector<int>&[m[K’
+ 1772 |   bool getParam(const std::string& key, [01;36m[Kstd::vector<int>& vec[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1783:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::vector<bool>&) const[m[K’
+ 1783 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::vector<bool>& vec) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1783:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::vector<bool>&[m[K’
+ 1783 |   bool getParam(const std::string& key, [01;36m[Kstd::vector<bool>& vec[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1795:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::map<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&) const[m[K’
+ 1795 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::map<std::string, std::string>& map) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1795:77:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&[m[K’
+ 1795 |   bool getParam(const std::string& key, [01;36m[Kstd::map<std::string, std::string>& map[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1806:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::map<std::__cxx11::basic_string<char>, double>&) const[m[K’
+ 1806 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::map<std::string, double>& map) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1806:72:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, double>&[m[K’
+ 1806 |   bool getParam(const std::string& key, [01;36m[Kstd::map<std::string, double>& map[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1817:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::map<std::__cxx11::basic_string<char>, float>&) const[m[K’
+ 1817 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::map<std::string, float>& map) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1817:71:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, float>&[m[K’
+ 1817 |   bool getParam(const std::string& key, [01;36m[Kstd::map<std::string, float>& map[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1828:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::map<std::__cxx11::basic_string<char>, int>&) const[m[K’
+ 1828 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::map<std::string, int>& map) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1828:69:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, int>&[m[K’
+ 1828 |   bool getParam(const std::string& key, [01;36m[Kstd::map<std::string, int>& map[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1839:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool ros::NodeHandle::getParam(const string&, std::map<std::__cxx11::basic_string<char>, bool>&) const[m[K’
+ 1839 |   bool [01;36m[KgetParam[m[K(const std::string& key, std::map<std::string, bool>& map) const;
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1839:70:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >[m[K’ to ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, bool>&[m[K’
+ 1839 |   bool getParam(const std::string& key, [01;36m[Kstd::map<std::string, bool>& map[m[K) const;
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+make[2]: *** [CMakeFiles/waypoint_follower_node.dir/build.make:63: CMakeFiles/waypoint_follower_node.dir/src/waypoint_follower.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:781: CMakeFiles/waypoint_follower_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
