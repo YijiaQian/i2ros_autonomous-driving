@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/fla_msgs/lib/python3/dist-packages/fla_msgs/msg/_TelemString.py

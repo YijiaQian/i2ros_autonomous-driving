@@ -1,8 +1,0 @@
-prefix=/home/yi/project_i2ros/devel/.private/fla_msgs
-
-Name: fla_msgs
-Description: Description of fla_msgs
-Version: 0.0.0
-Cflags: -I/home/yi/project_i2ros/devel/.private/fla_msgs/include
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg
-
-Name: traffic_light_detector_pkg
-Description: Description of traffic_light_detector_pkg
-Version: 0.0.0
-Cflags: -I/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime roscpp sensor_msgs cv_bridge std_msgs

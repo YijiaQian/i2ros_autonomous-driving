@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/mav_planning_msgs/include/mav_planning_msgs/PolygonService.h
