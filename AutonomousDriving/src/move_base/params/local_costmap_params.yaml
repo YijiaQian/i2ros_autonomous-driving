@@ -1,5 +1,5 @@
 local_costmap:
-  global_frame: "world"
+  global_frame: "odom"
   robot_base_frame: "body"
   update_frequency: 5
   width: 100.0

@@ -3,11 +3,11 @@
   <node pkg="octomap_server" type="octomap_server_node" name="octomap_server"> 
  
      <!--栅格分辨率-->
-    <param name="resolution" value="0.5" />
+    <param name="resolution" value="0.3" />
     
     <!--世界坐标系话题，一般为map-->
     <param name="frame_id" type="string" value="world" />
-    <param name="base_frame_id" type="string" value="body" />
+    <param name="base_frame_id" type="string" value="true_body" />
 
 
 
@@ -16,8 +16,8 @@
     <param name="latch" value="true" />
  
      <!--截取的三维点云范围--> 
-    <param name="pointcloud_max_z" value="3" />
-    <param name="pointcloud_min_z" value="-0.05" />
+    <param name="pointcloud_max_z" value="2" />
+    <param name="pointcloud_min_z" value="0.0005" />
  
 
     <param name="ground_filter/plane_distance " value="0.05" />
