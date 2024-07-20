@@ -2,7 +2,7 @@
 import rospy
 from geometry_msgs.msg import Twist, PoseStamped
 from nav_msgs.msg import Path
-from grid.py import Grid, a_star_search
+from grid import Grid, a_star_search
 import math
 import tf
 from tf.transformations import euler_from_quaternion
