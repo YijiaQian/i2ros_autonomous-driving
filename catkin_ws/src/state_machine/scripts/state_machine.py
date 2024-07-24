@@ -85,8 +85,8 @@ class StopState(smach.State):
 # Define a callback function to handle target twist messages
 def target_twist_callback(target_twist_msg):
     
-    # Assign the linear velocity value (linear.x) from the received target twist message to the data member of v
-    v.data = target_twist_msg.linear.x
+    # Assign the linear velocity value (linear.y) from the received target twist message to the data member of v
+    v.data = target_twist_msg.linear.y
     
     # Assign the angular velocity value (angular.z) from the received target twist message to the data member of omega
     omega.data = target_twist_msg.angular.z
@@ -114,9 +114,9 @@ class TrafficLight:
             
         if self.counter > 5:
             if signal_msg.color == "Red":
-                signal_value = False
-            elif signal_msg.color == "Green":
                 signal_value = True
+            elif signal_msg.color == "Green":
+                signal_value = False
             else:
                 pass
             self.counter = 0
@@ -143,8 +143,8 @@ def main():
     v = Float64()
     omega = Float64()
     
-    # ROS Subscriber for "target_twist" topic, calling target_twist_callback() on received Twist messages
-    twist_sub = rospy.Subscriber("target_twist", Twist, target_twist_callback)
+    # ROS Subscriber for "cmd_vel" topic, calling target_twist_callback() on received Twist messages
+    twist_sub = rospy.Subscriber("cmd_vel", Twist, target_twist_callback)
 
     # Declare target_v_pub and target_omega_pub as global variables
     global target_v_pub, target_omega_pub
