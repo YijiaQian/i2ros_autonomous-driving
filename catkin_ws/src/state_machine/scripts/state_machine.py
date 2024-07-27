@@ -112,7 +112,7 @@ class TrafficLight:
             self.last_signal_color = signal_msg.color
             self.counter = 0
             
-        if self.counter > 5:
+        if self.counter > 10:
             if signal_msg.color == "Red":
                 signal_value = True
             elif signal_msg.color == "Green":
