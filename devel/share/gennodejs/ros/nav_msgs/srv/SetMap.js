@@ -1,0 +1,1 @@
+/home/yi/project_i2ros/devel/.private/nav_msgs/share/gennodejs/ros/nav_msgs/srv/SetMap.js

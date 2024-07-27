@@ -1,0 +1,1 @@
+/home/yi/project_i2ros/devel/.private/nav_msgs/share/common-lisp/ros/nav_msgs/msg/MapMetaData.lisp

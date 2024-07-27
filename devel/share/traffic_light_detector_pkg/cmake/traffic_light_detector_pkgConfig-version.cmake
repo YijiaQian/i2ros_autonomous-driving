@@ -1,0 +1,1 @@
+/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/share/traffic_light_detector_pkg/cmake/traffic_light_detector_pkgConfig-version.cmake

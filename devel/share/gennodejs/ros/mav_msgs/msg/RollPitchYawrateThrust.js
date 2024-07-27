@@ -1,0 +1,1 @@
+/home/yi/project_i2ros/devel/.private/mav_msgs/share/gennodejs/ros/mav_msgs/msg/RollPitchYawrateThrust.js
