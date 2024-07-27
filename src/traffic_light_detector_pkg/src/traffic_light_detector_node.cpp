@@ -89,21 +89,29 @@ private:
         cv::cvtColor(region, hsv, cv::COLOR_BGR2HSV);
 
         cv::Mat red_mask1, red_mask2, yellow_mask, green_mask;
-        cv::inRange(hsv, cv::Scalar(0, 50, 50), cv::Scalar(10, 255, 255), red_mask1);
-        cv::inRange(hsv, cv::Scalar(170, 50, 50), cv::Scalar(180, 255, 255), red_mask2); // 增加红色的上限范围
+        cv::inRange(hsv, cv::Scalar(0, 50, 50), cv::Scalar(12, 255, 255), red_mask1);
+        cv::inRange(hsv, cv::Scalar(168, 50, 50), cv::Scalar(180, 255, 255), red_mask2); // 增加红色的上限范围
         cv::Mat red_mask = red_mask1 | red_mask2; // 合并两个红色范围
-        cv::inRange(hsv, cv::Scalar(20, 100, 100), cv::Scalar(30, 255, 255), yellow_mask);
-        cv::inRange(hsv, cv::Scalar(35, 50, 50), cv::Scalar(85, 255, 255), green_mask);
+        cv::inRange(hsv, cv::Scalar(18, 100, 100), cv::Scalar(32, 255, 255), yellow_mask);
+        cv::inRange(hsv, cv::Scalar(30, 50, 50), cv::Scalar(90, 255, 255), green_mask);
 
         int red_count = cv::countNonZero(red_mask);
         int yellow_count = cv::countNonZero(yellow_mask);
         int green_count = cv::countNonZero(green_mask);
 
-        if (red_count > yellow_count && red_count > green_count) {
+    //     if (red_count > yellow_count && red_count > green_count) {
+    //         return "Red";
+    //     } else if (yellow_count > red_count && yellow_count > green_count) {
+    //         return "Yellow";
+    //     } else if (green_count > red_count && green_count > yellow_count) {
+    //         return "Green";
+    //     } else {
+    //         return "Unknown";
+    //     }
+    // }
+        if (red_count > (green_count+2)) {
             return "Red";
-        } else if (yellow_count > red_count && yellow_count > green_count) {
-            return "Yellow";
-        } else if (green_count > red_count && green_count > yellow_count) {
+        } else if (green_count > (red_count+2)) {
             return "Green";
         } else {
             return "Unknown";
