@@ -26,23 +26,10 @@ class controllerNode{
   ros::Subscriber current_state, desired_Lvelocity, desired_Avelocity;
   ros::Publisher car_commands;
   ros::Timer timer;
-  /*
-  // Controller internals (you will have to set them below)
-  // Current state
-  Eigen::Vector3d x;     // current position of the UAV's c.o.m. in the world frame
-  Eigen::Vector3d v;     // current velocity of the UAV's c.o.m. in the world frame
-  Eigen::Matrix3d R;     // current orientation of the UAV
-  Eigen::Vector3d omega; // current angular velocity of the UAV's c.o.m. in the *body* frame
 
-  // Desired state
-  Eigen::Vector3d xd;    // desired position of the UAV's c.o.m. in the world frame
-  Eigen::Vector3d vd;    // desired velocity of the UAV's c.o.m. in the world frame
-  Eigen::Vector3d ad;    // desired acceleration of the UAV's c.o.m. in the world frame
-  double yawd;           // desired yaw angle
-*/
-  double hz;                        // frequency of the main control loop
-  double k1, k2, k3,kd1, kd2, kd3,kf1, kf2;  // coefficient of PD controll
-  double last_err1=0,last_err2=0;  //error for PD controll
+  double hz;                                  // frequency of the main control loop
+  double k1, k2, k3,kd1, kd2, kd3,kf1, kf2;   // coefficient of PD controll
+  double last_err1=0,last_err2=0;             //error for PD controll
   double cur_linVel_x=0,cur_linVel_y=0,cur_linVel=0,cur_angVel_z=0;
   double tar_linVel=0, tar_angVel=0;
   double signal_acc=0, signal_turn=0, signal_angVel=0,signal_bre=0;
@@ -76,14 +63,11 @@ public:
   }
 
 void onDesiredLvelocity(const std_msgs::Float64::ConstPtr& msg){
-    
     tar_linVel = msg->data;
     //ROS_INFO("Received DesiredLvelocity:[%.2f]", tar_linVel);
-
    }
 
-void onDesiredAvelocity(const std_msgs::Float64::ConstPtr& msg){
-    
+void onDesiredAvelocity(const std_msgs::Float64::ConstPtr& msg){ 
     tar_angVel = msg->data;
     tar_angVel = -tar_angVel;
     //ROS_INFO("Received DesiredAvelocity: [%.2f]", tar_angVel);
