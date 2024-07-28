@@ -91,6 +91,7 @@ public:
 void onDesiredLvelocity(const std_msgs::Float64::ConstPtr& msg){
     
     tar_linVel = msg->data;
+    tar_linVel = -tar_linVel;
     //ROS_INFO("Received DesiredLvelocity:[%.2f]", tar_linVel);
 
    }
