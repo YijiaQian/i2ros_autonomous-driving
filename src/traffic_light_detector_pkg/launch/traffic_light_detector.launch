@@ -1,0 +1,6 @@
+<launch>
+    <!-- 启动generatePointCloud节点 -->
+  <node pkg="traffic_light_detector_pkg" type="traffic_light_detector_node" name="traffic_light_detector_node" output="screen">
+ 
+  </node>
+</launch>
