@@ -1,0 +1,8 @@
+prefix=/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoints_publisher
+
+Name: waypoints_publisher
+Description: Description of waypoints_publisher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

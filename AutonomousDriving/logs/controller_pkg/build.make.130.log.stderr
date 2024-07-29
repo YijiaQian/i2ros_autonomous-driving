@@ -1,0 +1,11 @@
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/controller_pkg/src/controller_node.cpp:[m[K In member function ‘[01m[Kvoid controllerNode::onDesiredAvelocity(const ConstPtr&)[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/controller_pkg/src/controller_node.cpp:102:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  102 |     tar_angVel = -tar_angVel
+      |                             [01;31m[K^[m[K
+      |                             [32m[K;[m[K
+  103 |     //ROS_INFO("Received DesiredAvelocity: [%.2f]", tar_angVel);
+  104 |    [32m[K}[m[K
+      |    [32m[K~[m[K                         
+make[2]: *** [CMakeFiles/controller_node.dir/build.make:63: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/controller_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

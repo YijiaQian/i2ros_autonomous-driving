@@ -1,0 +1,6 @@
+/usr/bin/ld: CMakeFiles/waypoints_publisher.dir/src/waypoints_publisher.cpp.o: in function `WaypointsPublisher::WaypointsPublisher()':
+waypoints_publisher.cpp:(.text._ZN18WaypointsPublisherC2Ev[_ZN18WaypointsPublisherC5Ev]+0x15c): undefined reference to `ros::package::getPath(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/waypoints_publisher.dir/build.make:105: /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoints_publisher/lib/waypoints_publisher/waypoints_publisher] Error 1
+make[1]: *** [CMakeFiles/Makefile2:479: CMakeFiles/waypoints_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

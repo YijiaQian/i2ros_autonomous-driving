@@ -1,0 +1,8 @@
+prefix=/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/fla_msgs
+
+Name: fla_msgs
+Description: Description of fla_msgs
+Version: 0.0.0
+Cflags: -I/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/fla_msgs/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,7 @@
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/simulation/src/state_estimate_corruptor_node.cpp:[m[K In member function ‘[01m[Kvoid StateEstimateCorruptorNode::OnPose(const PoseStamped&)[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/simulation/src/state_estimate_corruptor_node.cpp:101:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ was not declared in this scope
+  101 |      tf2::Quaternion pose_ori;[01;31m[Ks[m[K
+      |                               [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/state_estimate_corruptor_node.dir/build.make:63: CMakeFiles/state_estimate_corruptor_node.dir/src/state_estimate_corruptor_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:316: CMakeFiles/state_estimate_corruptor_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

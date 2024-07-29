@@ -1,0 +1,7 @@
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/share/waypoint_publisher/cmake/waypoint_publisherConfig-version.cmake
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/share/waypoint_publisher/cmake/waypoint_publisherConfig.cmake
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/lib/pkgconfig/waypoint_publisher.pc
+Symlinking /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/lib/waypoint_publisher/waypoint_publisher
+Cleaning: (/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoint_publisher/lib/waypoint_publisher/waypoint_publisher_node, /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/lib/waypoint_publisher/waypoint_publisher_node)
+Unlinking: /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/lib/waypoint_publisher/waypoint_publisher_node
+Already unlinked: {}

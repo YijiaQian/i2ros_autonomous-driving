@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target waypoint_follower_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/waypoint_follower_node.dir/src/waypoint_follower.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoint_follower/lib/waypoint_follower/waypoint_follower_node[0m
+[100%] Built target waypoint_follower_node

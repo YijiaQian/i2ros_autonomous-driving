@@ -1,0 +1,5 @@
+<launch>
+  <node name="waypoints_publisher" pkg="waypoints_publisher" type="waypoints_publisher.py" output="screen">
+    <rosparam file="$(find waypoints_publisher)/config/waypoints.yaml" command="load"/>
+  </node>
+</launch>

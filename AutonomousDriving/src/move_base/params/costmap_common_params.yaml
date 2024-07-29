@@ -1,0 +1,19 @@
+obstacle_layer:
+  observation_sources:  bump
+  bump:
+    data_type: PointCloud
+    topic: /pointcloud
+    marking: true
+    clearing: false
+    min_obstacle_height: 0.0
+    max_obstacle_height: 0.5
+
+#observation_sources: point_cloud_sensor 
+#point_cloud_sensor: {sensor_frame: Quadrotor/Sensors/DepthCamera, data_type: PointCloud, topic: /pointcloud, marking: true, clearing: true}
+
+  
+footprint: [[2, 1], [2, -1], [-2, -1], [-2, 1]]
+footprint_padding: 0.03
+inflater_layer:
+  inflation_radius: 0.2
+  cost_scaling_factor: 1.0

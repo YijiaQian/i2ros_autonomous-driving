@@ -1,0 +1,1 @@
+/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoints_publisher/share/waypoints_publisher/cmake/waypoints_publisherConfig.cmake

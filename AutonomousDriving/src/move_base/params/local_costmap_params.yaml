@@ -1,0 +1,19 @@
+local_costmap:
+  global_frame: "world"
+  robot_base_frame: "body"
+  update_frequency: 5
+  width: 100.0
+  height: 100.0
+  origin_x: -50.0  # half of width, negated
+  origin_y: -50.0  # half of height, negated
+  resolution: 0.1
+  rollingg_window: true
+  # static_map: false
+
+  plugins:
+    - {name: static_layer, type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+  
+
+

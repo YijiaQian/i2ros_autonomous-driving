@@ -1,0 +1,57 @@
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:[m[K In constructor ‘[01m[KWaypointPublisher::WaypointPublisher()[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:11:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_rate_[m[K’ was not declared in this scope
+   11 |         private_nh.param("publish_rate", [01;31m[Kpublish_rate_[m[K, 1.0);
+      |                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:15:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope
+   15 |         [01;31m[Kpublisher_[m[K = nh.advertise<geometry_msgs::PoseStamped>("goal", 10);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:16:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscriber_[m[K’ was not declared in this scope
+   16 |         [01;31m[Ksubscriber_[m[K = nh.subscribe("/pose_est", 10, &WaypointPublisher::poseCallback, this);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:16:73:[m[K [01;31m[Kerror: [m[K‘[01m[KposeCallback[m[K’ is not a member of ‘[01m[KWaypointPublisher[m[K’
+   16 |         subscriber_ = nh.subscribe("/pose_est", 10, &WaypointPublisher::[01;31m[KposeCallback[m[K, this);
+      |                                                                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:[m[K In member function ‘[01m[Kvoid WaypointPublisher::run()[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:22:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_rate_[m[K’ was not declared in this scope
+   22 |         ros::Rate rate([01;31m[Kpublish_rate_[m[K);
+      |                        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:29:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kwaypoints_[m[K’ was not declared in this scope
+   29 |         while (ros::ok() && current_wp < [01;31m[Kwaypoints_[m[K.size()) {
+      |                                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:31:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_pose_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcurrent_wp[m[K’?
+   31 |             if (closeEnough([01;31m[Kcurrent_pose_[m[K, waypoints_[current_wp])) {
+      |                             [01;31m[K^~~~~~~~~~~~~[m[K
+      |                             [32m[Kcurrent_wp[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:31:17:[m[K [01;31m[Kerror: [m[K‘[01m[KcloseEnough[m[K’ was not declared in this scope
+   31 |             if ([01;31m[KcloseEnough[m[K(current_pose_, waypoints_[current_wp])) {
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:40:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope
+   40 |             [01;31m[Kpublisher_[m[K.publish(waypoints_[current_wp]);
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:[m[K In member function ‘[01m[Kvoid WaypointPublisher::loadWaypoints()[m[K’:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:73:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwaypoints_[m[K’ was not declared in this scope
+   73 |             [01;31m[Kwaypoints_[m[K.push_back(wp);
+      |             [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:1[m[K:
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:76:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kwaypoints_[m[K’ was not declared in this scope
+   76 |         ROS_INFO("Loaded %lu waypoints.", [01;31m[Kwaypoints_[m[K.size());
+      |                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:351:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+  351 |     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+      |                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:390:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+  390 |       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:575:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+  575 | #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+      |                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+  110 | #define ROS_INFO(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/waypoint_publisher/src/waypoint_publisher.cpp:76:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   76 |         [01;36m[KROS_INFO[m[K("Loaded %lu waypoints.", waypoints_.size());
+      |         [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/waypoint_publisher.dir/build.make:63: CMakeFiles/waypoint_publisher.dir/src/waypoint_publisher.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:781: CMakeFiles/waypoint_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

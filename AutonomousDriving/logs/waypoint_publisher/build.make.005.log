@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target waypoint_publisher[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/waypoint_publisher.dir/src/waypoint_publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoint_publisher/lib/waypoint_publisher/waypoint_publisher[0m
+[100%] Built target waypoint_publisher
