@@ -43,48 +43,72 @@ private:
     void detectTrafficLight()
     {
         if (semantic_image_.empty() || rgb_image_.empty()) {
+            traffic_light_detector_pkg::TrafficLightState msg;
+            msg.color = "Green";
+            traffic_light_pub_.publish(msg);
+            ROS_INFO("Detected traffic light color: %s", msg.color.c_str());
             return;
         }
+        //int rows = semantic_image_.rows;
+        //int cols = semantic_image_.cols;
+        //int mid_x = cols / 2;
+        //int width = cols / 4;
+        //cv::Rect middle_region(mid_x - width / 2, 0, width, rows);
 
-        // 定义图像的中间宽度区域
-        int rows = semantic_image_.rows;
-        int cols = semantic_image_.cols;
-        int mid_x = cols / 2;
-        int width = cols / 4; // 中间区域宽度为图像宽度的1/4
-        cv::Rect middle_region(mid_x - width / 2, 0, width, rows); // 覆盖整个高度
-
-        // 假设语义图像中交通灯的标注为特定的颜色，例如黄色
-        // 这里以黄色为例
         cv::Mat mask;
-        cv::inRange(semantic_image_(middle_region), cv::Scalar(0, 200, 200), cv::Scalar(50, 255, 255), mask); // 修改为黄色
+        cv::inRange(semantic_image_, cv::Scalar(0, 200, 200), cv::Scalar(50, 255, 255), mask); 
         cv::Mat output;
-        cv::bitwise_and(rgb_image_(middle_region), rgb_image_(middle_region), output, mask);
+        cv::bitwise_and(rgb_image_, rgb_image_, output, mask);
 
-        // 查找轮廓
         std::vector<std::vector<cv::Point>> contours;
         cv::findContours(mask, contours, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 
-        for (size_t i = 0; i < contours.size(); ++i) {
-            cv::Rect rect = cv::boundingRect(contours[i]);
-            cv::Mat traffic_light_region = rgb_image_(middle_region)(rect);
-            std::string color = getTrafficLightColor(traffic_light_region);
-            // ROS_INFO("Detected traffic light color: %s", color.c_str());
+        std::vector<cv::Rect> rects;
 
-            // 发布交通灯状态消息
-            traffic_light_detector_pkg::TrafficLightState msg;
-            msg.color = color;
-            traffic_light_pub_.publish(msg);
+        for (const auto& contour : contours) {
+            rects.push_back(cv::boundingRect(contour));
         }
+
+        
+        if (rects.empty()) {
+            traffic_light_detector_pkg::TrafficLightState msg;
+            msg.color = "Green";
+            traffic_light_pub_.publish(msg);
+            ROS_INFO("Detected traffic light color: %s", msg.color.c_str());
+            return;
+        }
+
+        int mid_x = rgb_image_.cols / 2; 
+        cv::Rect selected_rect; 
+
+        if (rects.size() == 1) {
+            selected_rect = rects[0];
+        } 
+        else {
+            int min_distance = INT_MAX;
+
+            for (const auto& rect : rects) {
+                int center_x = rect.x + rect.width / 2;
+                int distance = abs(center_x - mid_x);
+            
+                if (distance < min_distance) {
+                    min_distance = distance;
+                    selected_rect = rect;
+                }
+            }
+        }
+
+        cv::Mat traffic_light_region = rgb_image_(selected_rect);
+        std::string color = getTrafficLightColor(traffic_light_region);
+        ROS_INFO("Detected traffic light color: %s", color.c_str());
+
+        traffic_light_detector_pkg::TrafficLightState msg;
+        msg.color = color;
+        traffic_light_pub_.publish(msg);
     }
 
     std::string getTrafficLightColor(const cv::Mat& region)
     {
-        // int margin = 1; // 设置边缘裁剪的宽度
-        // cv::Rect center_rect(margin, margin, region.cols - 2 * margin, region.rows - 2 * margin);
-        // cv::Mat center_region = region(center_rect);
-        // cv::Mat hsv;
-        // cv::cvtColor(center_region, hsv, cv::COLOR_BGR2HSV);
-
         cv::Mat hsv;
         cv::cvtColor(region, hsv, cv::COLOR_BGR2HSV);
 
@@ -106,7 +130,7 @@ private:
         } else if (green_count > red_count && green_count > yellow_count) {
             return "Green";
         } else {
-            return "Unknown";
+            return "Green";
         }
     }
 };
