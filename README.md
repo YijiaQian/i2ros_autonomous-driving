@@ -20,30 +20,30 @@ Ensure you have the following software installed:
 
 ### Steps
 
-1. Clone the repository:
+1. Install \`git\`:
+   ```
+   sudo apt install git
+   ```
+
+2. Clone the repository:
    ```
    git clone https://gitlab.lrz.de/00000000014B8BFA/project_i2ros.git
    cd AutonomousDriving
    ```
 
-2. Install the \`ros-noetic-navigation\` package:
+3. Install the \`ros-noetic-navigation\` package:
    ```
    sudo apt install ros-noetic-navigation
    ```
 
-3. Install \`rospack tools\`:
+4. Install \`rospack tools\`:
    ```
    sudo apt install rospack-tools
    ```
 
-4. Install \`catkin tools\`:
+5. Install \`catkin tools\`:
    ```
    sudo apt-get install ros-noetic-catkin python3-catkin-tools
-   ```
-
-5. Install \`git\`:
-   ```
-   sudo apt install git
    ```
 
 6. Install \`ros-noetic-octomap-server\`:
