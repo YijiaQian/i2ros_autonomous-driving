@@ -6,7 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Image1
+        - /Path1
       Splitter Ratio: 0.5
     Tree Height: 322
   - Class: rviz/Selection
@@ -26,7 +26,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud2
+    SyncSource: Image
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -57,7 +57,7 @@ Visualization Manager:
       Enabled: true
       Length: 3
       Name: Axes
-      Radius: 1
+      Radius: 0.5
       Reference Frame: body
       Show Trail: false
       Value: true
@@ -109,14 +109,14 @@ Visualization Manager:
       Show Trail: false
       Value: true
     - Class: octomap_rviz_plugin/OccupancyGrid
-      Enabled: true
+      Enabled: false
       Max. Height Display: 3.4028234663852886e+38
       Max. Octree Depth: 16
       Min. Height Display: -3.4028234663852886e+38
       Name: OccupancyGrid
       Octomap Topic: /octomap_full
       Queue Size: 5
-      Value: true
+      Value: false
       Voxel Alpha: 1
       Voxel Coloring: Z-Axis
       Voxel Rendering: Occupied Voxels
@@ -141,7 +141,7 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
-      Topic: /move_base_new/DWAPlannerROS/local_plan
+      Topic: /move_base_new/TrajectoryPlannerROS/global_plan
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -151,22 +151,6 @@ Visualization Manager:
       Name: Polygon
       Queue Size: 10
       Topic: /move_base_new/global_costmap/footprint
-      Unreliable: false
-      Value: true
-    - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz/Pose
-      Color: 255; 25; 0
-      Enabled: true
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Queue Size: 10
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Axes
-      Topic: /move_base_new/current_goal
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -205,7 +189,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -220,7 +204,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
     - Alpha: 0.699999988079071
       Class: rviz/Map
       Color Scheme: map
@@ -241,6 +225,22 @@ Visualization Manager:
       Normalize Range: true
       Queue Size: 2
       Transport Hint: raw
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 2
+      Axes Radius: 0.4000000059604645
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Queue Size: 10
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic: /move_base_new/current_goal
       Unreliable: false
       Value: true
   Enabled: true
@@ -271,7 +271,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 72.74909210205078
+      Distance: 75.90814971923828
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -279,17 +279,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -64.13664245605469
-        Y: 41.264747619628906
-        Z: -10.095662117004395
+        X: -52.21904373168945
+        Y: 21.646770477294922
+        Z: 24.32390022277832
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.2697972059249878
+      Pitch: 1.5247963666915894
       Target Frame: <Fixed Frame>
-      Yaw: 4.836933612823486
+      Yaw: 6.206934928894043
     Saved: ~
 Window Geometry:
   Displays:
@@ -309,5 +309,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 154
-  Y: 239
+  X: 714
+  Y: 27

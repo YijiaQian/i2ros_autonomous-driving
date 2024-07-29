@@ -11,8 +11,8 @@ obstacle_layer:
 #observation_sources: point_cloud_sensor 
 #point_cloud_sensor: {sensor_frame: Quadrotor/Sensors/DepthCamera, data_type: PointCloud, topic: /pointcloud, marking: true, clearing: true}
 
-
-footprint: [[1, 2], [1, -2], [-1, -2], [-1, 2]]
+  
+footprint: [[2, 1], [2, -1], [-2, -1], [-2, 1]]
 footprint_padding: 0.03
 inflater_layer:
   inflation_radius: 0.2

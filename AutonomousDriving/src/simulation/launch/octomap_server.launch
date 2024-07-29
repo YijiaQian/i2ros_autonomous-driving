@@ -3,29 +3,29 @@
   <node pkg="octomap_server" type="octomap_server_node" name="octomap_server"> 
  
      <!--栅格分辨率-->
-    <param name="resolution" value="0.3" />
+    <param name="resolution" value="0.8" />
     
     <!--世界坐标系话题，一般为map-->
     <param name="frame_id" type="string" value="world" />
-    <param name="base_frame_id" type="string" value="true_body" />
+    <param name="base_frame_id" type="string" value="body" />
 
 
 
  
-    <param name="sensor_model/max_range" value="1000.0" />
+    <param name="sensor_model/max_range" value="50.0" />
     <param name="latch" value="true" />
  
      <!--截取的三维点云范围--> 
-    <param name="pointcloud_max_z" value="2" />
-    <param name="pointcloud_min_z" value="0.0005" />
+    <param name="pointcloud_max_z" value="1.5" />
+    <param name="pointcloud_min_z" value="-0.4" />
  
 
-    <param name="ground_filter/plane_distance " value="0.05" />
+    <param name="ground_filter/plane_distance " value="0.01" />
     
      <!--订阅的点云消息名称 PointClout2，即上一步发布出来的点云topic--> 
      <!-- cloud_in是octomap默认的输入话题，做一下映射-->
     <remap from="cloud_in" to="pointcloud2" />
-    <remap from="projected_map" to="/map" />
+    <remap from="projected_map" to="/map_raw" />
   </node>
  
 </launch>

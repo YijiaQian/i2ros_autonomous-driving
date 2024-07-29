@@ -1,0 +1,15 @@
+[31m[1mCMake Error[0m at /home/jonas/i2ROS/project/ziou/AutonomousDriving/src/state_machine/CMakeLists.txt:171 (add_executable):
+  Cannot find source file:
+
+    src/state_machine_node.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+[31m[1mCMake Error[0m at /home/jonas/i2ROS/project/ziou/AutonomousDriving/src/state_machine/CMakeLists.txt:171 (add_executable):
+  No SOURCES given to target: state_machine_node
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+make: *** [Makefile:880: cmake_check_build_system] Error 1

@@ -34,8 +34,7 @@ class StateEstimateCorruptorNode {
 
 		ros::NodeHandle pnh("~");
 		fla_utils::SafeGetParam(pnh, "pos_white_sig", pos_white_sigma_);
-		fla_utils::SafeGetParam(pnh, "drift_rw_factor", drift_rw_factor_)
-;
+		fla_utils::SafeGetParam(pnh, "drift_rw_factor", drift_rw_factor_);
 		tf_listener_ = std::make_shared<tf2_ros::TransformListener>(tf_buffer_);
 		srand(0);  // initialize the random seed
 
@@ -92,6 +91,21 @@ class StateEstimateCorruptorNode {
 		pose_corrupted.pose.position.x += drift_.position.x + whiteNoise(pos_white_sigma_);
 		pose_corrupted.pose.position.y += drift_.position.y + whiteNoise(pos_white_sigma_);
 		pose_corrupted.pose.position.z += drift_.position.z + whiteNoise(pos_white_sigma_);
+		
+		tf2::Quaternion q_rot;
+    	q_rot.setRPY(0, 0, M_PI/2); // Roll, Pitch, Yaw
+
+    	// 将四元数转换为消息
+    	geometry_msgs::Quaternion q_msg = tf2::toMsg(q_rot);
+    	// 应用旋转到pose_corrupted
+    	tf2::Quaternion pose_ori;
+    	tf2::fromMsg(pose_corrupted.pose.orientation, pose_ori);
+    	// 组合原始姿态的旋转与新旋转
+    	pose_ori *= q_rot;
+    	pose_ori.normalize();
+    	// 更新pose_corrupted的方向
+    	pose_corrupted.pose.orientation = tf2::toMsg(pose_ori);
+
 
 		PublishCorruptedPose(pose_corrupted);
 
@@ -141,8 +155,8 @@ class StateEstimateCorruptorNode {
 
 		geometry_msgs::TwistStamped corrupted_twist;
 		corrupted_twist = twist;
-		corrupted_twist.twist.linear.x = twist.twist.linear.x * (1 + whiteNoise(drift_rw_factor_));
-		corrupted_twist.twist.linear.y = twist.twist.linear.y * (1 + whiteNoise(drift_rw_factor_));
+		corrupted_twist.twist.linear.x = twist.twist.linear.y * (1 + whiteNoise(drift_rw_factor_));
+		corrupted_twist.twist.linear.y = -twist.twist.linear.x * (1 + whiteNoise(drift_rw_factor_));
 		corrupted_velocity_pub.publish(corrupted_twist);
 	}
 

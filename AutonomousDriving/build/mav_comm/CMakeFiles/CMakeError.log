@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cd761/fast && /usr/bin/make -f CMakeFiles/cmTC_cd761.dir/build.make CMakeFiles/cmTC_cd761.dir/build
+Run Build Command(s):/usr/bin/make cmTC_299c5/fast && /usr/bin/make -f CMakeFiles/cmTC_299c5.dir/build.make CMakeFiles/cmTC_299c5.dir/build
 make[1]: Entering directory '/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cd761.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_cd761.dir/src.c.o   -c /home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_cd761
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd761.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_cd761.dir/src.c.o  -o cmTC_cd761 
-/usr/bin/ld: CMakeFiles/cmTC_cd761.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_299c5.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_299c5.dir/src.c.o   -c /home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_299c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_299c5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_299c5.dir/src.c.o  -o cmTC_299c5 
+/usr/bin/ld: CMakeFiles/cmTC_299c5.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_cd761.dir/build.make:87: cmTC_cd761] Error 1
+make[1]: *** [CMakeFiles/cmTC_299c5.dir/build.make:87: cmTC_299c5] Error 1
 make[1]: Leaving directory '/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_cd761/fast] Error 2
+make: *** [Makefile:121: cmTC_299c5/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_33d3b/fast && /usr/bin/make -f CMakeFiles/cmTC_33d3b.dir/build.make CMakeFiles/cmTC_33d3b.dir/build
+Run Build Command(s):/usr/bin/make cmTC_30857/fast && /usr/bin/make -f CMakeFiles/cmTC_30857.dir/build.make CMakeFiles/cmTC_30857.dir/build
 make[1]: Entering directory '/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_33d3b.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_33d3b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_33d3b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33d3b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_33d3b.dir/CheckFunctionExists.c.o  -o cmTC_33d3b  -lpthreads 
+Building C object CMakeFiles/cmTC_30857.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_30857.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30857
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30857.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_30857.dir/CheckFunctionExists.c.o  -o cmTC_30857  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_33d3b.dir/build.make:87: cmTC_33d3b] Error 1
+make[1]: *** [CMakeFiles/cmTC_30857.dir/build.make:87: cmTC_30857] Error 1
 make[1]: Leaving directory '/home/jonas/i2ROS/project/ziou/AutonomousDriving/build/mav_comm/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_33d3b/fast] Error 2
+make: *** [Makefile:121: cmTC_30857/fast] Error 2
 
 
 

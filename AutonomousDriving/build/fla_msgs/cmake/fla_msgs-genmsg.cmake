@@ -19,7 +19,7 @@ add_custom_target(fla_msgs_generate_messages ALL)
 
 get_filename_component(_filename "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg" NAME_WE)
 add_custom_target(_fla_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fla_msgs" "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg" "std_msgs/Header:std_msgs/String"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fla_msgs" "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg" "std_msgs/String:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightEvent.msg" NAME_WE)
@@ -64,7 +64,7 @@ add_custom_target(_fla_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg" NAME_WE)
 add_custom_target(_fla_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fla_msgs" "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg" "std_msgs/Float64:geometry_msgs/Point:std_msgs/Header:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/PoseStamped"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fla_msgs" "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg" "geometry_msgs/Point:geometry_msgs/Pose:std_msgs/Float64:geometry_msgs/PoseStamped:geometry_msgs/Quaternion:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/TelemString.msg" NAME_WE)
@@ -79,7 +79,7 @@ add_custom_target(_fla_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg" NAME_WE)
 add_custom_target(_fla_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fla_msgs" "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg" "fla_msgs/Keypoint:std_msgs/Header:fla_msgs/Detection"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fla_msgs" "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg" "fla_msgs/Detection:fla_msgs/Keypoint:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Latency.msg" NAME_WE)
@@ -106,7 +106,7 @@ add_custom_target(_fla_msgs_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_cpp(fla_msgs
@@ -160,7 +160,7 @@ _generate_msg_cpp(fla_msgs
 _generate_msg_cpp(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_cpp(fla_msgs
@@ -178,7 +178,7 @@ _generate_msg_cpp(fla_msgs
 _generate_msg_cpp(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg"
   "${MSG_I_FLAGS}"
-  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg"
+  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_cpp(fla_msgs
@@ -259,7 +259,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fla_msgs_generate_messages_cpp)
 _generate_msg_eus(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_eus(fla_msgs
@@ -313,7 +313,7 @@ _generate_msg_eus(fla_msgs
 _generate_msg_eus(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_eus(fla_msgs
@@ -331,7 +331,7 @@ _generate_msg_eus(fla_msgs
 _generate_msg_eus(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg"
   "${MSG_I_FLAGS}"
-  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg"
+  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_eus(fla_msgs
@@ -412,7 +412,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fla_msgs_generate_messages_eus)
 _generate_msg_lisp(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_lisp(fla_msgs
@@ -466,7 +466,7 @@ _generate_msg_lisp(fla_msgs
 _generate_msg_lisp(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_lisp(fla_msgs
@@ -484,7 +484,7 @@ _generate_msg_lisp(fla_msgs
 _generate_msg_lisp(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg"
   "${MSG_I_FLAGS}"
-  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg"
+  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_lisp(fla_msgs
@@ -565,7 +565,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fla_msgs_generate_messages_lisp)
 _generate_msg_nodejs(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_nodejs(fla_msgs
@@ -619,7 +619,7 @@ _generate_msg_nodejs(fla_msgs
 _generate_msg_nodejs(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_nodejs(fla_msgs
@@ -637,7 +637,7 @@ _generate_msg_nodejs(fla_msgs
 _generate_msg_nodejs(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg"
   "${MSG_I_FLAGS}"
-  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg"
+  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_nodejs(fla_msgs
@@ -718,7 +718,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fla_msgs_generate_messages_nodejs)
 _generate_msg_py(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/FlightStateTransition.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_py(fla_msgs
@@ -772,7 +772,7 @@ _generate_msg_py(fla_msgs
 _generate_msg_py(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/WaypointList.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Float64.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_py(fla_msgs
@@ -790,7 +790,7 @@ _generate_msg_py(fla_msgs
 _generate_msg_py(fla_msgs
   "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/ImageDetections.msg"
   "${MSG_I_FLAGS}"
-  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg"
+  "/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Detection.msg;/home/jonas/i2ROS/project/ziou/AutonomousDriving/src/system/fla_msgs/msg/Keypoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fla_msgs
 )
 _generate_msg_py(fla_msgs

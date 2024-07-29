@@ -19,23 +19,24 @@
   </include>
   
   <!-- wodehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
-  <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" />
-  <node name="map_server" pkg="map_server" type="map_server">
-      <rosparam file="$(find simulation)/cfg/map_server.yaml" command="load"/>
-  </node>
+  <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" /> 
+
 
   <include file="$(find move_base)/launch/move_base.launch" /> 
   <include file="$(find waypoints_publisher)/launch/waypoints_publisher.launch" />
-  <!-- <include file="$(find waypoints_publisher)/launch/publish_waypoints.launch" /> -->
-  <!-- <include file="$(find my_map_publisher)/launch/map_publisher.launch" /> -->
+
 
 
   
   <include file="$(find map)/launch/generatePointCloud.launch" />
   <include file="$(find simulation)/launch/octomap_server.launch" />
+  <!-- <include file="$(find controller_pkg)/launch/controller.launch" /> -->
 
   <node pkg="traffic_light_detector_pkg" type="traffic_light_detector_node" name="traffic_light_detector_node" output="screen">
   </node>
+  
+  <node pkg="state_machine" type="state_machine.py" name="state_machine" output="screen"/>
+  <node pkg="map_expander" name="map_expander_node"  type="map_expander_node.py" output="screen" />
 
     
 
@@ -71,6 +72,8 @@
 
   <node pkg="tf2_ros" type="static_transform_publisher"
         name="sim_true_body"      args="0 0 0 0 0 0 /Quadrotor/TrueState /true_body" />
+
+
 
   <node pkg="tf2_ros" type="static_transform_publisher"
         name="sim_rgb_camera"      args="0 0 0 0 0 0 /camera /Quadrotor/RGBCameraLeft " />

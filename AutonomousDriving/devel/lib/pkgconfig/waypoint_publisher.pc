@@ -1,1 +1,0 @@
-/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoint_publisher/lib/pkgconfig/waypoint_publisher.pc

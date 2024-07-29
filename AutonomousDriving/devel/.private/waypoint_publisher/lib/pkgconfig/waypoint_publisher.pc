@@ -1,8 +1,0 @@
-prefix=/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoint_publisher
-
-Name: waypoint_publisher
-Description: Description of waypoint_publisher
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp geometry_msgs rospack

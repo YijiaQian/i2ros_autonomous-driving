@@ -1,8 +1,0 @@
-prefix=/home/jonas/i2ROS/project/ziou/AutonomousDriving/devel/.private/waypoint_follower
-
-Name: waypoint_follower
-Description: Description of waypoint_follower
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp geometry_msgs

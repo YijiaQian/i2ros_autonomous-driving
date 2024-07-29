@@ -40,7 +40,7 @@ def main():
                             (current_pose.position.y - target_pose.position.y) ** 2 +
                             (current_pose.position.z - target_pose.position.z) ** 2)
 
-            if distance <= 1:
+            if distance <= 3:
                 rospy.loginfo("Close enough to waypoint %d, moving to next waypoint", pose_index + 1)
                 pose_index += 1
                 if pose_index >= len(poses):
