@@ -126,6 +126,118 @@
 //     ros::spin();
 //     return 0;
 // }
+// #include <ros/ros.h>
+// #include <sensor_msgs/Image.h>
+// #include <cv_bridge/cv_bridge.h>
+// #include <opencv2/opencv.hpp>
+// #include <traffic_light_detector_pkg/TrafficLightState.h>
+
+// class TrafficLightDetector {
+// public:
+//     TrafficLightDetector()
+//     : last_known_color("Unknown") // 初始化最后一个已知颜色为“Unknown”
+//     {
+//         semantic_sub_ = nh_.subscribe("/unity_ros/OurCar/Sensors/SemanticCamera/image_raw", 1, &TrafficLightDetector::semanticCallback, this);
+//         rgb_sub_ = nh_.subscribe("/unity_ros/OurCar/Sensors/RGBCameraRight/image_raw", 1, &TrafficLightDetector::rgbCallback, this);
+//         traffic_light_pub_ = nh_.advertise<traffic_light_detector_pkg::TrafficLightState>("traffic_light_state", 1);
+//     }
+
+//     void semanticCallback(const sensor_msgs::ImageConstPtr& msg)
+//     {
+//         try {
+//             semantic_image_ = cv_bridge::toCvShare(msg, "bgr8")->image;
+//         } catch (cv_bridge::Exception& e) {
+//             ROS_ERROR("cv_bridge exception: %s", e.what());
+//         }
+//     }
+
+//     void rgbCallback(const sensor_msgs::ImageConstPtr& msg)
+//     {
+//         try {
+//             rgb_image_ = cv_bridge::toCvShare(msg, "bgr8")->image;
+//             detectTrafficLight();
+//         } catch (cv_bridge::Exception& e) {
+//             ROS_ERROR("cv_bridge exception: %s", e.what());
+//         }
+//     }
+
+// private:
+//     ros::NodeHandle nh_;
+//     ros::Subscriber semantic_sub_;
+//     ros::Subscriber rgb_sub_;
+//     ros::Publisher traffic_light_pub_;
+//     cv::Mat semantic_image_;
+//     cv::Mat rgb_image_;
+//     std::string last_known_color; // 添加一个字符串成员变量来存储上一次已知的颜色
+
+//     void detectTrafficLight()
+//     {
+//         if (semantic_image_.empty() || rgb_image_.empty()) {
+//             return;
+//         }
+
+//         int rows = semantic_image_.rows;
+//         int cols = semantic_image_.cols;
+//         int mid_x = cols / 2;
+//         int width = cols / 4;
+//         cv::Rect middle_region(mid_x - width / 2, 0, width, rows);
+
+//         cv::Mat mask;
+//         cv::inRange(semantic_image_(middle_region), cv::Scalar(0, 200, 200), cv::Scalar(50, 255, 255), mask);
+//         cv::Mat output;
+//         cv::bitwise_and(rgb_image_(middle_region), rgb_image_(middle_region), output, mask);
+
+//         std::vector<std::vector<cv::Point>> contours;
+//         cv::findContours(mask, contours, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
+
+//         for (size_t i = 0; i < contours.size(); ++i) {
+//             cv::Rect rect = cv::boundingRect(contours[i]);
+//             cv::Mat traffic_light_region = rgb_image_(middle_region)(rect);
+//             std::string color = getTrafficLightColor(traffic_light_region);
+//             if (color == "Unknown") {
+//                 color = last_known_color; // 如果检测到未知颜色，则使用上一次已知颜色
+//             } else {
+//                 last_known_color = color; // 更新最后一次已知颜色
+//             }
+//             ROS_INFO("Detected traffic light color: %s", color.c_str());
+
+//             traffic_light_detector_pkg::TrafficLightState msg;
+//             msg.color = color;
+//             traffic_light_pub_.publish(msg);
+//         }
+//     }
+
+//     std::string getTrafficLightColor(const cv::Mat& region)
+//     {
+//         cv::Mat hsv;
+//         cv::cvtColor(region, hsv, cv::COLOR_BGR2HSV);
+
+//         cv::Mat red_mask1, red_mask2, yellow_mask, green_mask;
+//         cv::inRange(hsv, cv::Scalar(0, 50, 50), cv::Scalar(12, 255, 255), red_mask1);
+//         cv::inRange(hsv, cv::Scalar(168, 50, 50), cv::Scalar(180, 255, 255), red_mask2);
+//         cv::Mat red_mask = red_mask1 | red_mask2;
+//         cv::inRange(hsv, cv::Scalar(30, 50, 50), cv::Scalar(90, 255, 255), green_mask);
+
+//         int red_count = cv::countNonZero(red_mask);
+//         int green_count = cv::countNonZero(green_mask);
+
+//         if (red_count > (green_count+4)) {
+//             return "Red";
+//         } else if (green_count > (red_count+4)) {
+//             return "Green";
+//         } else {
+//             return "Unknown";
+//         }
+//     }
+// };
+
+// int main(int argc, char** argv)
+// {
+//     ros::init(argc, argv, "traffic_light_detector_node");
+//     TrafficLightDetector detector;
+//     ros::spin();
+//     return 0;
+// }
 #include <ros/ros.h>
 #include <sensor_msgs/Image.h>
 #include <cv_bridge/cv_bridge.h>
@@ -135,7 +247,6 @@
 class TrafficLightDetector {
 public:
     TrafficLightDetector()
-    : last_known_color("Unknown") // 初始化最后一个已知颜色为“Unknown”
     {
         semantic_sub_ = nh_.subscribe("/unity_ros/OurCar/Sensors/SemanticCamera/image_raw", 1, &TrafficLightDetector::semanticCallback, this);
         rgb_sub_ = nh_.subscribe("/unity_ros/OurCar/Sensors/RGBCameraRight/image_raw", 1, &TrafficLightDetector::rgbCallback, this);
@@ -168,43 +279,85 @@ private:
     ros::Publisher traffic_light_pub_;
     cv::Mat semantic_image_;
     cv::Mat rgb_image_;
-    std::string last_known_color; // 添加一个字符串成员变量来存储上一次已知的颜色
 
     void detectTrafficLight()
     {
         if (semantic_image_.empty() || rgb_image_.empty()) {
+            // 如果没有检测到交通灯，持续发布绿灯
+            traffic_light_detector_pkg::TrafficLightState msg;
+            msg.color = "Green";
+            traffic_light_pub_.publish(msg);
+            ROS_INFO("Detected traffic light color: %s", msg.color.c_str());
             return;
         }
 
-        int rows = semantic_image_.rows;
-        int cols = semantic_image_.cols;
-        int mid_x = cols / 2;
-        int width = cols / 4;
-        cv::Rect middle_region(mid_x - width / 2, 0, width, rows);
+        // 定义图像的中间宽度区域
+        //int rows = semantic_image_.rows;
+        //int cols = semantic_image_.cols;
+        //int mid_x = cols / 2;
+        //int width = cols / 4; // 中间区域宽度为图像宽度的1/4
+        //cv::Rect middle_region(mid_x - width / 2, 0, width, rows); // 覆盖整个高度
 
+        // 假设语义图像中交通灯的标注为特定的颜色，例如黄色
+        // 这里以黄色为例
         cv::Mat mask;
-        cv::inRange(semantic_image_(middle_region), cv::Scalar(0, 200, 200), cv::Scalar(50, 255, 255), mask);
+        cv::inRange(semantic_image_, cv::Scalar(0, 200, 200), cv::Scalar(50, 255, 255), mask); // 修改为黄色
         cv::Mat output;
-        cv::bitwise_and(rgb_image_(middle_region), rgb_image_(middle_region), output, mask);
+        cv::bitwise_and(rgb_image_, rgb_image_, output, mask);
 
+        // 查找轮廓
         std::vector<std::vector<cv::Point>> contours;
         cv::findContours(mask, contours, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 
-        for (size_t i = 0; i < contours.size(); ++i) {
-            cv::Rect rect = cv::boundingRect(contours[i]);
-            cv::Mat traffic_light_region = rgb_image_(middle_region)(rect);
-            std::string color = getTrafficLightColor(traffic_light_region);
-            if (color == "Unknown") {
-                color = last_known_color; // 如果检测到未知颜色，则使用上一次已知颜色
-            } else {
-                last_known_color = color; // 更新最后一次已知颜色
-            }
-            ROS_INFO("Detected traffic light color: %s", color.c_str());
+        std::vector<cv::Rect> rects;
 
-            traffic_light_detector_pkg::TrafficLightState msg;
-            msg.color = color;
-            traffic_light_pub_.publish(msg);
+        for (const auto& contour : contours) {
+            rects.push_back(cv::boundingRect(contour)); // 获取每个轮廓的矩形边界
         }
+
+        
+        if (rects.empty()) {
+            // 如果没有检测到交通灯，持续发布绿灯
+            traffic_light_detector_pkg::TrafficLightState msg;
+            msg.color = "Green";
+            traffic_light_pub_.publish(msg);
+            ROS_INFO("Detected traffic light color: %s", msg.color.c_str());
+            return;
+        }
+
+        // 计算图像中间线的x坐标
+        int mid_x = rgb_image_.cols / 2; 
+        cv::Rect selected_rect; // 用于保存选中的交通灯
+
+        if (rects.size() == 1) {
+            // 如果只有一个交通灯，直接处理
+            selected_rect = rects[0];
+        } 
+        else {
+            // 如果有多个交通灯，选择最靠近中间线的交通灯
+            int min_distance = INT_MAX; // 初始化最小距离
+
+            for (const auto& rect : rects) {
+                int center_x = rect.x + rect.width / 2; // 计算交通灯中心的x坐标
+                int distance = abs(center_x - mid_x); // 计算与中间线的距离
+            
+                // 更新最小距离及对应的矩形框
+                if (distance < min_distance) {
+                    min_distance = distance;
+                    selected_rect = rect;
+                }
+            }
+        }
+
+        // 处理最靠近中间线的交通灯
+        cv::Mat traffic_light_region = rgb_image_(selected_rect);
+        std::string color = getTrafficLightColor(traffic_light_region);
+        ROS_INFO("Detected traffic light color: %s", color.c_str());
+
+        // 发布交通灯状态消息
+        traffic_light_detector_pkg::TrafficLightState msg;
+        msg.color = color;
+        traffic_light_pub_.publish(msg);
     }
 
     std::string getTrafficLightColor(const cv::Mat& region)
@@ -213,20 +366,24 @@ private:
         cv::cvtColor(region, hsv, cv::COLOR_BGR2HSV);
 
         cv::Mat red_mask1, red_mask2, yellow_mask, green_mask;
-        cv::inRange(hsv, cv::Scalar(0, 50, 50), cv::Scalar(12, 255, 255), red_mask1);
-        cv::inRange(hsv, cv::Scalar(168, 50, 50), cv::Scalar(180, 255, 255), red_mask2);
-        cv::Mat red_mask = red_mask1 | red_mask2;
-        cv::inRange(hsv, cv::Scalar(30, 50, 50), cv::Scalar(90, 255, 255), green_mask);
+        cv::inRange(hsv, cv::Scalar(0, 50, 50), cv::Scalar(10, 255, 255), red_mask1);
+        cv::inRange(hsv, cv::Scalar(170, 50, 50), cv::Scalar(180, 255, 255), red_mask2); // 增加红色的上限范围
+        cv::Mat red_mask = red_mask1 | red_mask2; // 合并两个红色范围
+        cv::inRange(hsv, cv::Scalar(20, 100, 100), cv::Scalar(30, 255, 255), yellow_mask);
+        cv::inRange(hsv, cv::Scalar(35, 50, 50), cv::Scalar(85, 255, 255), green_mask);
 
         int red_count = cv::countNonZero(red_mask);
+        int yellow_count = cv::countNonZero(yellow_mask);
         int green_count = cv::countNonZero(green_mask);
 
-        if (red_count > (green_count+2)) {
+        if (red_count > yellow_count && red_count > green_count) {
             return "Red";
-        } else if (green_count > (red_count+2)) {
+        } else if (yellow_count > red_count && yellow_count > green_count) {
+            return "Yellow";
+        } else if (green_count > red_count && green_count > yellow_count) {
             return "Green";
         } else {
-            return "Unknown";
+            return "Green";
         }
     }
 };
