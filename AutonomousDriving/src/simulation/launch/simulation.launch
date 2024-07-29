@@ -30,7 +30,7 @@
   
   <include file="$(find map)/launch/generatePointCloud.launch" />
   <include file="$(find simulation)/launch/octomap_server.launch" />
-  <!-- <include file="$(find controller_pkg)/launch/controller.launch" /> -->
+  <include file="$(find controller_pkg)/launch/controller.launch" /> 
 
   <node pkg="traffic_light_detector_pkg" type="traffic_light_detector_node" name="traffic_light_detector_node" output="screen">
   </node>

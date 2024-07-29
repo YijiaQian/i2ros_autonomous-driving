@@ -150,7 +150,7 @@ poses:
 
   - position:
       x: -4.29
-      y: 153.06
+      y: 129.06
       z: 0.0
     orientation:
       x: 0.002275
@@ -170,7 +170,7 @@ poses:
 
   - position:
       x: -9.05
-      y: 123.91
+      y: 124.91
       z: 0.0
     orientation:
       x: 0.002275
@@ -190,14 +190,14 @@ poses:
       w: 0.0100
 
   - position:
-      x: -51
-      y: 118.27
+      x: -52
+      y: 115.25
       z: 0.0
     orientation:
       x: 0.002275
       y: -0.000211
-      z: -0.869
-      w: 0.4947
+      z: 0.7133
+      w: -0.700
 
   - position:
       x: -52
