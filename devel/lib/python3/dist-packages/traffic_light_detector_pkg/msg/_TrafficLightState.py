@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/lib/python3/dist-packages/traffic_light_detector_pkg/msg/_TrafficLightState.py

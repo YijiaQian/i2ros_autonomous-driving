@@ -1,7 +1,0 @@
-map
-/home/yi/project_i2ros/devel/.private/map/cmake.lock /home/yi/project_i2ros/devel/./cmake.lock
-/home/yi/project_i2ros/devel/.private/map/share/map/cmake/mapConfig-version.cmake /home/yi/project_i2ros/devel/share/map/cmake/mapConfig-version.cmake
-/home/yi/project_i2ros/devel/.private/map/share/map/cmake/mapConfig.cmake /home/yi/project_i2ros/devel/share/map/cmake/mapConfig.cmake
-/home/yi/project_i2ros/devel/.private/map/lib/map/generatePointCloud /home/yi/project_i2ros/devel/lib/map/generatePointCloud
-/home/yi/project_i2ros/devel/.private/map/lib/map/generatePointCloud_node /home/yi/project_i2ros/devel/lib/map/generatePointCloud_node
-/home/yi/project_i2ros/devel/.private/map/lib/pkgconfig/map.pc /home/yi/project_i2ros/devel/lib/pkgconfig/map.pc

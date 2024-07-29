@@ -1,8 +1,0 @@
-prefix=/home/yi/project_i2ros/install
-
-Name: map
-Description: Description of map
-Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp sensor_msgs image_transport cv_bridge pcl_ros pcl_conversions

@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/generate_pointcloud/lib/pkgconfig/generate_pointcloud.pc

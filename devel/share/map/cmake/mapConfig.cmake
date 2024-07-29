@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/map/share/map/cmake/mapConfig.cmake

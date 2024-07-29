@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/fla_msgs/share/gennodejs/ros/fla_msgs/msg/Latency.js

@@ -1,1 +1,0 @@
-/home/yi/project_i2ros/devel/.private/traffic_light_detector_pkg/include/traffic_light_detector_pkg/TrafficLightState.h

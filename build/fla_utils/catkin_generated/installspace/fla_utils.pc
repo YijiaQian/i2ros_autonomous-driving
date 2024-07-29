@@ -1,8 +1,0 @@
-prefix=/home/yi/project_i2ros/install
-
-Name: fla_utils
-Description: Description of fla_utils
-Version: 0.0.0
-Cflags: -I${prefix}/include -I/home/yi/project_i2ros/devel/include/utils
-Libs: -L${prefix}/lib 
-Requires: 
